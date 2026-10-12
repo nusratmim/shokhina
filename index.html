@@ -1,0 +1,894 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sokhina · Jamdani, protidin</title>
+<meta name="description" content="Sokhina: handwoven Jamdani from Rupganj, tailored into modern wear for women and men. Pitch and lookbook.">
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Hind+Siliguri:wght@500;600&display=swap">
+<style>
+/* Layout: three tabs (Pitch, Brochure, Speech). Wide illustrated bands alternate with a narrow reading column. */
+:root{
+  color-scheme: light;
+  --ground:#F9F8F5; --paper:#FFFFFF; --sunken:#F1EFEA;
+  --ink:#1A1D26; --ink-2:#4B5060; --ink-3:#7C8090;
+  --line:#E3E0D8; --line-2:#EEECE6;
+  --sage:#3F6B5D; --sage-soft:#8FB0A4; --sage-tint:#E6EEEA;
+  --indigo:#4F5F8F; --indigo-tint:#E8EAF3;
+  --blush:#9A5B5E; --blush-tint:#F6E9E7;
+  --sand:#7A6A45; --sand-tint:#F3EEE2;
+  --display:"Cormorant Garamond","Iowan Old Style",Georgia,serif;
+  --body:"Figtree","Segoe UI",system-ui,sans-serif;
+  --bangla:"Hind Siliguri","Noto Sans Bengali","Vrinda",sans-serif;
+}
+*{box-sizing:border-box}
+body{color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.62;padding-inline:20px;padding-block:0 80px}
+.wrap{max-width:1040px;margin-inline:auto}
+h1,h2,h3,p,ul,ol,figure{margin:0}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;color:var(--ink)}
+a{color:var(--sage)}
+
+/* top bar + tabs */
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding-block:18px;border-bottom:1px solid var(--line)}
+.mark{display:flex;align-items:baseline;gap:10px}
+.mark .bn{font-family:var(--bangla);font-weight:600;font-size:1.7rem;color:var(--sage);line-height:1}
+.mark .en{font-family:var(--display);letter-spacing:.32em;font-size:.95rem;color:var(--ink-2)}
+.tabs{display:flex;gap:6px;background:var(--sunken);padding:4px;border-radius:999px}
+.tabs button{font:600 14.5px var(--body);color:var(--ink-2);background:transparent;border:0;border-radius:999px;padding:8px 18px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--paper);color:var(--sage);box-shadow:0 1px 2px rgba(26,29,38,.10)}
+.tabs button:focus-visible,.copy:focus-visible{outline:3px solid var(--sage-soft);outline-offset:2px}
+
+/* shared blocks */
+.eyebrow{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);font-weight:700}
+section.blk{padding-block:52px;border-bottom:1px solid var(--line-2);display:flex;flex-direction:column;gap:22px}
+section.blk>h2{font-size:clamp(1.6rem,4vw,2.15rem);line-height:1.2;max-width:24ch}
+.read{max-width:66ch;color:var(--ink-2);display:flex;flex-direction:column;gap:12px}
+.read b{color:var(--ink);font-weight:600}
+.note{font-size:14px;color:var(--ink-3);max-width:74ch}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px 22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.card h3{font-size:1.18rem}
+.card p,.card li{color:var(--ink-2);font-size:15.5px}
+.card ul{padding-left:18px;display:flex;flex-direction:column;gap:5px}
+.t-sage{background:var(--sage-tint)} .t-blush{background:var(--blush-tint)} .t-indigo{background:var(--indigo-tint)} .t-sand{background:var(--sand-tint)}
+.c-sage{color:var(--sage)} .c-blush{color:var(--blush)} .c-indigo{color:var(--indigo)} .c-sand{color:var(--sand)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:28px;align-items:center;padding-block:44px 40px;border-bottom:1px solid var(--line-2)}
+.hero h1{font-size:clamp(2.2rem,5.6vw,3.5rem);line-height:1.1}
+.hero .txt{display:flex;flex-direction:column;gap:16px}
+.hero .lede{color:var(--ink-2);font-size:1.08rem;max-width:46ch}
+.tagline{font-family:var(--display);font-size:1.25rem;color:var(--sage)}
+.rail{background:var(--sage-tint);border-radius:20px;padding:22px 10px 8px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:end}
+.rail svg{width:100%;height:auto;display:block}
+.rail .mid{transform:scale(1.14);transform-origin:bottom center}
+
+/* garments */
+.look{border-radius:14px;padding:14px 14px 16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.look svg{width:100%;max-width:210px;height:auto;display:block;margin-inline:auto}
+.look h3{font-size:1.06rem;line-height:1.25}
+.look p{font-size:14.5px;color:var(--ink-2)}
+.look .who{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700}
+.linehead{display:flex;flex-direction:column;gap:6px;max-width:60ch}
+.linehead h3{font-size:1.5rem}
+.linehead p{color:var(--ink-2)}
+.lineblk{display:flex;flex-direction:column;gap:16px}
+.pal{display:flex;gap:6px;align-items:center;font-size:13.5px;color:var(--ink-3);flex-wrap:wrap}
+.pal i{width:22px;height:22px;border-radius:50%;border:1px solid var(--line);display:inline-block}
+
+/* photo looks */
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:start}
+.trio img{width:100%;aspect-ratio:3/5;object-fit:cover;border-radius:14px;display:block;background:var(--sunken)}
+.trio img:nth-child(2){margin-top:26px}
+.filters{display:flex;flex-direction:column;gap:10px}
+.fgroup{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.fgroup>span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--ink-3);min-width:78px}
+.chip{font:600 13.5px var(--body);border:1px solid var(--line);background:var(--paper);color:var(--ink-2);border-radius:999px;padding:6px 13px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--sage);color:#FFFFFF;border-color:var(--sage)}
+.chip:focus-visible{outline:3px solid var(--sage-soft);outline-offset:2px}
+.count{font-size:14px;color:var(--ink-3)}
+.gal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.lk{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.lk img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:var(--sunken)}
+.lk .b{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px}
+.lk .code{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);display:flex;gap:8px;align-items:center;font-weight:600}
+.lk .dot{width:13px;height:13px;border-radius:50%;border:1px solid var(--line);flex:none}
+.lk h3{font-size:1.22rem;line-height:1.25}
+.lk p{font-size:15px;color:var(--ink-2)}
+.lk .tags{display:flex;flex-wrap:wrap;gap:5px}
+.lk .tags span{font-size:12px;font-weight:600;color:var(--sage);background:var(--sage-tint);border-radius:999px;padding:2px 9px}
+.spec{display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 12px;font-size:13.5px;margin:6px 0 0;padding-top:10px;border-top:1px solid var(--line-2)}
+.spec dt{color:var(--ink-3)} .spec dd{margin:0;color:var(--ink-2)}
+@media (max-width:860px){.gal{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.gal{grid-template-columns:minmax(0,1fr)}}
+
+/* signatures + pairs */
+.sig{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.sig figure{display:flex;flex-direction:column;gap:8px;min-width:0}
+.sig img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px;display:block;background:var(--sunken)}
+.sig b{font-family:var(--display);font-weight:400;font-size:1.08rem;line-height:1.25}
+.sig span{font-size:14px;color:var(--ink-2)}
+.pairs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.pair{display:flex;flex-direction:column;gap:6px;min-width:0}
+.pair .duo{display:grid;grid-template-columns:1fr 1fr;gap:4px;border-radius:12px;overflow:hidden}
+.pair img{width:100%;aspect-ratio:3/5;object-fit:cover;display:block;background:var(--sunken)}
+.pair h3{font-size:1.15rem;margin-top:4px}
+.pair p{font-size:15px;color:var(--ink-2)}
+.pair span{font-size:12.5px;color:var(--ink-3)}
+.ghead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px}
+.ghead h2{font-size:clamp(1.6rem,4vw,2.15rem)}
+.ghead span{color:var(--ink-3);font-size:15px}
+@media (max-width:860px){.sig{grid-template-columns:repeat(3,minmax(0,1fr))}.pairs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.sig{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* type tuning for the display face */
+h1,h2,h3{font-weight:500;letter-spacing:-.005em}
+.hero h1{font-size:clamp(2.6rem,6.4vw,4.1rem);line-height:1.04}
+section.blk>h2,.ghead h2{font-size:clamp(1.95rem,4.6vw,2.7rem);line-height:1.12}
+.card h3,.lk h3,.pair h3{font-size:1.4rem;line-height:1.18}
+.cue h2{font-size:1.4rem}
+.say .big{font-size:1.62rem;line-height:1.3}
+.tagline{font-size:1.5rem;font-style:italic}
+.sig b,.sw b{font-size:1.25rem;font-weight:500}
+.rank{font-size:1.9rem}
+.mark .en{font-family:var(--body);font-size:.72rem;font-weight:600;letter-spacing:.34em}
+.pairs{grid-template-columns:repeat(3,minmax(0,1fr))}
+.names td,.names th{padding:8px 10px;font-size:14px}
+.kit{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}
+.kit div{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--ink-2)}
+.kit i{display:block;aspect-ratio:1/1;border-radius:10px;border:1px solid var(--line)}
+.kit b{font-weight:600;color:var(--ink)}
+.wcard{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:22px 24px;display:flex;flex-direction:column;gap:10px;max-width:360px}
+.wcard .mark .bn{font-size:1.5rem}
+.wcard dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:0;font-size:14px}
+.wcard dt{color:var(--ink-3);letter-spacing:.08em;text-transform:uppercase;font-size:11.5px;padding-top:2px}
+.wcard dd{margin:0;border-bottom:1px dotted var(--ink-3);min-height:1.3em;color:var(--ink-2)}
+
+/* ---------- brochure: editorial lookbook ---------- */
+.bk{--gap:26px}
+.bk section{padding-block:68px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:26px}
+.bk .lab{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.bk .big{font-family:var(--display);font-weight:500;font-size:clamp(2.3rem,6vw,3.7rem);line-height:1.04;color:#2F4A42;text-wrap:balance;max-width:16ch}
+.bk .sub{font-family:var(--display);font-size:clamp(1.25rem,2.6vw,1.6rem);line-height:1.3;color:#2F4A42;max-width:34ch}
+.bk p.txt{color:var(--ink-2);max-width:56ch;font-size:16.5px}
+.bcov{background:var(--sage-tint);margin-top:28px;border-radius:6px;padding:56px 32px 40px;display:flex;flex-direction:column;gap:14px;align-items:center;text-align:center}
+.bcov .bn{font-family:var(--bangla);font-weight:600;font-size:clamp(3.4rem,12vw,6rem);line-height:1;color:var(--sage)}
+.bcov .en{font-size:.8rem;font-weight:600;letter-spacing:.5em;padding-left:.5em;color:var(--ink-2)}
+.bcov .big{max-width:none}
+.bcov .trio{width:min(100%,680px);margin-top:18px}
+.bcov .trio img{border-radius:4px}
+.toc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px 26px;list-style:none;padding:0;margin:0}
+.toc li{display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--line);padding-top:12px}
+.toc b{font-family:var(--display);font-weight:500;font-size:1.9rem;line-height:1;color:var(--sage-soft)}
+.toc span{font-family:var(--display);font-size:1.25rem;color:var(--ink)}
+.toc small{font-size:13.5px;color:var(--ink-3)}
+.two{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:36px;align-items:center}
+.two img{width:100%;border-radius:4px;display:block;background:var(--sunken)}
+.two .col{display:flex;flex-direction:column;gap:16px}
+.bch{display:flex;flex-direction:column;gap:8px;margin-top:22px;padding-top:26px;border-top:1px solid var(--line-2)}
+.bch:first-of-type{margin-top:0;border-top:0;padding-top:0}
+.bch h3{font-size:clamp(1.7rem,3.6vw,2.2rem);color:#2F4A42}
+.bch .dots{display:flex;gap:7px;margin-top:4px}
+.bch .dots i{width:26px;height:26px;border-radius:50%;border:1px solid var(--line)}
+.bgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px var(--gap)}
+.bl{display:flex;flex-direction:column;gap:5px;min-width:0;margin:0}
+.bl img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px;display:block;background:var(--sunken);margin-bottom:8px}
+.bl .code{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);display:flex;align-items:center;gap:8px;font-weight:600}
+.bl .code i{width:12px;height:12px;border-radius:50%;border:1px solid var(--line);flex:none}
+.bl h4{font-family:var(--display);font-weight:500;font-size:1.5rem;line-height:1.15;margin:0;color:#2F4A42}
+.bl .cut{font-size:14.5px;color:var(--ink)}
+.bl .jam{font-size:13.5px;color:var(--ink-3)}
+.bl .jam b{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;display:block;margin-top:5px}
+.bfeat{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--gap);align-items:center}
+.bfeat .bl h4{font-size:2.1rem}
+.bfeat .say2{font-family:var(--display);font-size:1.45rem;line-height:1.3;color:#2F4A42;max-width:24ch}
+.kids{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap)}
+@media (max-width:860px){.kids{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.sizes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.sizes table{min-width:0}
+.sizes .scroll{min-width:0}
+.bk .contact{border-radius:6px;margin-top:0}
+@media (max-width:860px){.bgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.toc{grid-template-columns:repeat(2,minmax(0,1fr))}.two,.bfeat{grid-template-columns:minmax(0,1fr)}.kit{grid-template-columns:repeat(4,minmax(0,1fr))}.pairs{grid-template-columns:repeat(2,minmax(0,1fr))}.sizes{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.bgrid{grid-template-columns:minmax(0,1fr)}.bk section{padding-block:44px}.bcov{padding:40px 18px 24px}}
+
+/* Jamdani feel: woven paar band and a tone-on-tone buti ground */
+body{background-color:var(--ground);background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2284%22 height=%2284%22%3E%3Cpath d=%22M18.2 14.0h1.4v1.4h-1.4zM16.8 15.4h1.4v1.4h-1.4zM18.2 15.4h1.4v1.4h-1.4zM19.6 15.4h1.4v1.4h-1.4zM15.4 16.8h1.4v1.4h-1.4zM16.8 16.8h1.4v1.4h-1.4zM19.6 16.8h1.4v1.4h-1.4zM21.0 16.8h1.4v1.4h-1.4zM14.0 18.2h1.4v1.4h-1.4zM15.4 18.2h1.4v1.4h-1.4zM18.2 18.2h1.4v1.4h-1.4zM21.0 18.2h1.4v1.4h-1.4zM22.4 18.2h1.4v1.4h-1.4zM15.4 19.6h1.4v1.4h-1.4zM16.8 19.6h1.4v1.4h-1.4zM19.6 19.6h1.4v1.4h-1.4zM21.0 19.6h1.4v1.4h-1.4zM16.8 21.0h1.4v1.4h-1.4zM18.2 21.0h1.4v1.4h-1.4zM19.6 21.0h1.4v1.4h-1.4zM18.2 22.4h1.4v1.4h-1.4zM60.2 56.0h1.4v1.4h-1.4zM58.8 57.4h1.4v1.4h-1.4zM60.2 57.4h1.4v1.4h-1.4zM61.6 57.4h1.4v1.4h-1.4zM57.4 58.8h1.4v1.4h-1.4zM58.8 58.8h1.4v1.4h-1.4zM61.6 58.8h1.4v1.4h-1.4zM63.0 58.8h1.4v1.4h-1.4zM56.0 60.2h1.4v1.4h-1.4zM57.4 60.2h1.4v1.4h-1.4zM60.2 60.2h1.4v1.4h-1.4zM63.0 60.2h1.4v1.4h-1.4zM64.4 60.2h1.4v1.4h-1.4zM57.4 61.6h1.4v1.4h-1.4zM58.8 61.6h1.4v1.4h-1.4zM61.6 61.6h1.4v1.4h-1.4zM63.0 61.6h1.4v1.4h-1.4zM58.8 63.0h1.4v1.4h-1.4zM60.2 63.0h1.4v1.4h-1.4zM61.6 63.0h1.4v1.4h-1.4zM60.2 64.4h1.4v1.4h-1.4z%22 fill=%22%23ECE9E1%22/%3E%3Cpath d=%22M59.9 16.5h1.4v1.4h-1.4zM58.5 17.9h1.4v1.4h-1.4zM59.9 17.9h1.4v1.4h-1.4zM61.3 17.9h1.4v1.4h-1.4zM59.9 19.3h1.4v1.4h-1.4zM17.9 58.5h1.4v1.4h-1.4zM16.5 59.9h1.4v1.4h-1.4zM17.9 59.9h1.4v1.4h-1.4zM19.3 59.9h1.4v1.4h-1.4zM17.9 61.3h1.4v1.4h-1.4z%22 fill=%22%23F1EFE9%22/%3E%3C/svg%3E");background-size:84px 84px}
+.paar{height:30px;margin-inline:-20px;background:#F1F5F2;border-bottom:1px solid var(--line-2)}
+.paar svg{display:block;width:100%;height:100%}
+.paar.thin{margin-inline:0;border:0;border-radius:4px;overflow:hidden}
+.bcov{background:#EEF3F0;border:0}
+h1,h2,h3{color:#2F4A42}
+.contact{background:var(--sage-tint);color:var(--ink)}
+.contact h2{color:#2F4A42}
+.contact p{color:var(--ink-2)}
+.contact .todo{color:var(--ink-3)}
+.toc{grid-template-columns:repeat(3,minmax(0,1fr))}
+.top{border-bottom:0}
+.hero{border-bottom:1px solid var(--line)}
+.bcov,.card,.lk,table,.wcard{box-shadow:0 0 0 0 transparent}
+
+/* swatches */
+.sw{display:flex;flex-direction:column;gap:8px;min-width:0}
+.sw svg{width:100%;aspect-ratio:1/1;border-radius:12px;border:1px solid var(--line);display:block}
+.sw b{font-family:var(--display);font-weight:400;font-size:1.05rem}
+.sw span{font-size:14px;color:var(--ink-2)}
+
+/* map + tables */
+.scroll{overflow-x:auto}
+.map{min-width:560px;width:100%;height:auto;display:block}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px;background:var(--paper);border:1px solid var(--line);border-radius:12px}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line-2);vertical-align:top}
+th{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:700;background:var(--sunken)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+tr.sum td{font-weight:600;background:var(--sage-tint)}
+.rank{font-family:var(--display);font-size:1.5rem;line-height:1}
+.cal{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+.mo{border-radius:10px;padding:10px 12px;background:var(--sunken);display:flex;flex-direction:column;gap:2px;min-height:86px}
+.mo b{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.mo span{font-size:14px;color:var(--ink-2);line-height:1.35}
+.mo.hot{background:var(--indigo-tint)} .mo.hot b{color:var(--indigo)}
+.mo.fest{background:var(--blush-tint)} .mo.fest b{color:var(--blush)}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;counter-reset:s}
+.steps .card{counter-increment:s}
+.steps .card::before{content:"Weeks " attr(data-w);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--sage)}
+
+/* brochure */
+.bcover{background:var(--sage-tint);border-radius:22px;padding:40px 28px 0;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;margin-top:36px;overflow:hidden}
+.bcover .bn{font-family:var(--bangla);font-weight:600;font-size:clamp(3.2rem,11vw,5.4rem);color:var(--sage);line-height:1}
+.bcover .en{font-family:var(--display);letter-spacing:.5em;font-size:1rem;color:var(--ink-2);padding-left:.5em}
+.bcover h1{font-size:clamp(1.5rem,4vw,2.1rem);margin-top:8px}
+.bcover .rail{background:transparent;width:min(100%,520px);padding-bottom:0}
+.steps3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.contact{background:var(--ink);color:#F9F8F5;border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:8px;margin-top:40px}
+.contact h2{color:#F9F8F5;font-size:1.6rem}
+.contact p{color:#D5D7DE;max-width:60ch}
+.contact .todo{color:#F3EEE2;font-size:14px}
+
+/* speech */
+.row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px 32px;padding-block:28px;border-bottom:1px solid var(--line-2)}
+.cue{display:flex;flex-direction:column;gap:2px;padding-top:4px}
+.cue h2{font-size:1.2rem;color:var(--sage);line-height:1.25}
+.cue span{font-size:13.5px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.say{display:flex;flex-direction:column;gap:13px;max-width:62ch;font-size:17px}
+.say .big{font-family:var(--display);font-size:1.4rem;line-height:1.4}
+.dir{font-style:italic;color:var(--ink-3);font-size:14.5px}
+.shead{padding-block:40px 28px;display:flex;flex-direction:column;gap:12px;border-bottom:1px solid var(--line)}
+.shead h1{font-size:clamp(1.9rem,5vw,2.8rem);line-height:1.15}
+.copy{align-self:flex-start;font:600 14.5px var(--body);color:#FFFFFF;background:var(--sage);border:1px solid var(--sage);border-radius:999px;padding:9px 18px;cursor:pointer}
+footer{margin-top:36px;color:var(--ink-3);font-size:13.5px;display:flex;flex-direction:column;gap:6px;max-width:80ch}
+
+@media (max-width:860px){
+  .grid4,.steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid3,.steps3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero{grid-template-columns:minmax(0,1fr)}
+  .cal{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:560px){
+  .grid2,.grid3,.steps3,.steps{grid-template-columns:minmax(0,1fr)}
+  .grid4.looks{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cal{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .row{grid-template-columns:minmax(0,1fr)}
+  .cue{flex-direction:row;justify-content:space-between;align-items:baseline}
+  section.blk{padding-block:38px}
+}
+</style>
+</head>
+<body>
+
+<div class="paar" aria-hidden="true"><svg preserveAspectRatio="xMidYMid slice"><defs><pattern id="paarTop" width="22" height="30" patternUnits="userSpaceOnUse"><path d="M0 4h22v.8H0zM0 25.2h22v.8H0z" fill="#C4D6CE"/><path d="M4.95 11.15h1.1v1.1h-1.1zM3.85 12.25h1.1v1.1h-1.1zM4.95 12.25h1.1v1.1h-1.1zM6.05 12.25h1.1v1.1h-1.1zM2.75 13.35h1.1v1.1h-1.1zM3.85 13.35h1.1v1.1h-1.1zM6.05 13.35h1.1v1.1h-1.1zM7.15 13.35h1.1v1.1h-1.1zM1.65 14.45h1.1v1.1h-1.1zM2.75 14.45h1.1v1.1h-1.1zM4.95 14.45h1.1v1.1h-1.1zM7.15 14.45h1.1v1.1h-1.1zM8.25 14.45h1.1v1.1h-1.1zM2.75 15.55h1.1v1.1h-1.1zM3.85 15.55h1.1v1.1h-1.1zM6.05 15.55h1.1v1.1h-1.1zM7.15 15.55h1.1v1.1h-1.1zM3.85 16.65h1.1v1.1h-1.1zM4.95 16.65h1.1v1.1h-1.1zM6.05 16.65h1.1v1.1h-1.1zM4.95 17.75h1.1v1.1h-1.1z" fill="#9DBBAF"/><path d="M15.9 14.4h1.2v1.2h-1.2z" fill="#D8C9A3"/></pattern></defs><rect width="100%" height="100%" fill="url(#paarTop)"/></svg></div>
+
+<div class="wrap">
+  <div class="top">
+    <div class="mark"><span class="bn">সখিনা</span><span class="en">SOKHINA</span></div>
+    <div class="tabs" role="tablist" aria-label="Sections">
+      <button role="tab" id="tab-pitch" data-t="pitch" aria-selected="true">Pitch</button>
+      <button role="tab" id="tab-brochure" data-t="brochure" aria-selected="false">Brochure</button>
+    </div>
+  </div>
+
+  <!-- ===================== PITCH ===================== -->
+  <div id="pitch" role="tabpanel" aria-labelledby="tab-pitch">
+    <div class="hero">
+      <div class="txt">
+        <div class="eyebrow">Business pitch</div>
+        <h1>Jamdani, cut for the life we live now</h1>
+        <p class="tagline">Sokhina. Jamdani, protidin.</p>
+        <p class="lede">A clothing brand that buys handwoven Jamdani from Rupganj weavers and tailors it into modern wear for men and women: everyday pieces, akdh sets, biye bari outfits and a signature koti.</p>
+      </div>
+      <div class="trio"><img src="img/d07.jpg" alt="Sleeveless powder blue Jamdani tea dress"><img src="img/d04b.jpg" alt="Midnight indigo Jamdani halter gown"><img src="img/m01.jpg" alt="Sage Jamdani koti over a white panjabi"></div>
+    </div>
+
+    <section class="blk">
+      <div class="eyebrow">The insight</div>
+      <h2>Our finest fabric spends its life in the almirah</h2>
+      <div class="read">
+        <p>Jamdani is woven by hand, motif by motif, and one saree can take weeks or months. UNESCO lists the craft as intangible cultural heritage, and it carries Bangladesh's geographical indication.</p>
+        <p>Yet it is sold in almost one shape, the saree, and worn a few times a year. <b>Men have almost no way to wear it. Younger buyers find it too formal and too delicate.</b> The weaver depends on a customer who buys once every few years.</p>
+        <p>The fabric has plenty of admirers. It needs more shapes and more occasions.</p>
+      </div>
+    </section>
+
+    <section class="blk">
+      <div class="eyebrow">The brand</div>
+      <h2>The name is Sokhina</h2>
+      <div class="grid2">
+        <div class="card t-sage" style="border-color:transparent">
+          <div class="mark"><span class="bn" style="font-size:2.6rem">সখিনা</span><span class="en">SOKHINA</span></div>
+          <p>Sokhina is one of the most familiar women's names in rural Bangladesh. It is the name of the woman at the loom. It is the name of Birangona Sokhina, the heroine of the old Mymensingh ballad. And inside it is the word <b>sokhi</b>, a close friend.</p>
+          <p>For years the name has been used as a joke about village women. Putting it on the finest cloth in the country is the statement. People will stop, smile, and ask why, and the answer is our whole story.</p>
+          <ul>
+            <li>Every piece carries the name of the weaver who made the cloth</li>
+            <li>Unmistakably Bangladeshi, and still easy to say abroad</li>
+            <li>A person, so the brand can speak in her voice</li>
+          </ul>
+          <p class="tagline">Jamdani, protidin.</p>
+          <p>Campaign line: <b>Almari khulo.</b> Buti stays as the name of our logo mark and of the signature koti.</p>
+        </div>
+        <div class="card">
+          <h3>How the names compare</h3>
+          <div class="scroll"><table class="names" style="min-width:440px">
+            <tr><th>Name</th><th class="n">Stops the scroll</th><th class="n">Tells the story</th><th class="n">Feels premium</th><th class="n">Easy to say</th><th class="n">Ownable</th><th class="n">Total</th></tr>
+            <tr class="sum"><td>Sokhina</td><td class="n">5</td><td class="n">5</td><td class="n">3</td><td class="n">5</td><td class="n">4</td><td class="n">22</td></tr>
+            <tr><td>Buti</td><td class="n">3</td><td class="n">4</td><td class="n">4</td><td class="n">5</td><td class="n">2</td><td class="n">18</td></tr>
+            <tr><td>Maku</td><td class="n">4</td><td class="n">3</td><td class="n">3</td><td class="n">5</td><td class="n">3</td><td class="n">18</td></tr>
+            <tr><td>Shitalakshya</td><td class="n">2</td><td class="n">5</td><td class="n">5</td><td class="n">2</td><td class="n">4</td><td class="n">18</td></tr>
+            <tr><td>Tana-Poren</td><td class="n">3</td><td class="n">4</td><td class="n">4</td><td class="n">3</td><td class="n">3</td><td class="n">17</td></tr>
+          </table></div>
+          <p class="note">Scores are my judgement, out of 5. Feels premium is where Sokhina is weakest, so the design has to carry it: soft colour, quiet motifs and a lot of white space. Buti scores low on ownable because it is a common textile word across Bengal.</p>
+          <p class="note"><b>Before you print anything:</b> check the name at RJSC and the trademark office (DPDT), and that the Facebook, Instagram and .com.bd names are free. If Sokhina is a real weaver you work with, get her written consent and agree what she receives. If she is not, say openly that the name stands for every weaver.</p>
+        </div>
+      </div>
+      <h3 style="font-size:1.6rem;margin-top:10px">One house, four lines</h3>
+      <div class="grid4">
+        <div class="card t-sage" style="border-color:transparent"><h3>Sokhina Protidin</h3><p>Everyday wear for the office, campus and weekend.</p></div>
+        <div class="card t-sand" style="border-color:transparent"><h3>Sokhina Utshob</h3><p>Eid, Boishakh, Falgun, Ekushey, Puja and the holud.</p></div>
+        <div class="card t-blush" style="border-color:transparent"><h3>Sokhina Biye</h3><p>Akdh, reception and bridal, plus matching sets for the family.</p></div>
+        <div class="card t-indigo" style="border-color:transparent"><h3>Choto Sokhina</h3><p>Children's pieces cut from the same cloth as the parents'.</p></div>
+      </div>
+    </section>
+
+    <section class="blk">
+      <div class="eyebrow">Brand kit</div>
+      <h2>How Sokhina looks and sounds</h2>
+      <div class="kit">
+        <div><i style="background:#F9F8F5"></i><b>Muslin</b>The page</div>
+        <div><i style="background:#3F6B5D"></i><b>Shitalakshya</b>Logo, headings</div>
+        <div><i style="background:#E6EEEA"></i><b>Pata</b>Soft panels</div>
+        <div><i style="background:#F6E9E7"></i><b>Golap</b>Akdh, bridal</div>
+        <div><i style="background:#E8EAF3"></i><b>Nil</b>Evening</div>
+        <div><i style="background:#F3EEE2"></i><b>Balu</b>Koti, menswear</div>
+        <div><i style="background:#1A1D26"></i><b>Kali</b>Text</div>
+      </div>
+      <div class="grid3">
+        <div class="card"><h3>Design</h3><ul><li>Sparse buti and soft colour. The cut and the paar do the talking.</li><li>One colour per piece, thread tonal or metallic.</li><li>No loud colour anywhere. Evening means dusk tones, never dark ones.</li></ul></div>
+        <div class="card"><h3>Photography</h3><ul><li>Plain plaster wall, daylight, one prop.</li><li>One garment per picture, model at ease.</li><li>Light jewellery, so the cloth is the subject.</li></ul></div>
+        <div class="card"><h3>Voice</h3><ul><li>Short sentences, the way a person talks.</li><li>Name the weaver, the village and the days.</li><li>Never say exclusive or luxury. Show the work.</li></ul></div>
+      </div>
+      <div class="two" style="margin-top:6px">
+        <img loading="lazy" src="img/b04.jpg" alt="A sage gift box with a folded Jamdani garment, ribbon and a blank card">
+        <div class="col">
+          <h3 style="font-size:1.6rem">The box and the weaver card</h3>
+          <p class="read">Every order arrives in a sage box with a cotton dust bag and a card filled in by hand. The card is our proof of authenticity, and it is what customers photograph and post.</p>
+          <div class="wcard">
+            <div class="mark"><span class="bn">সখিনা</span><span class="en">SOKHINA</span></div>
+            <dl><dt>Woven by</dt><dd></dd><dt>Village</dt><dd></dd><dt>Days on the loom</dt><dd></dd><dt>Piece</dt><dd>No. __ of __</dd></dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blk">
+      <div class="eyebrow">Where we can play</div>
+      <h2>The empty corner of the market</h2>
+      <div class="read">
+        <p>Sort the market by two questions: is it real handloom Jamdani, and is it tailored clothing or only a saree? Three corners are crowded. One is nearly empty.</p>
+      </div>
+      <div class="scroll">
+        <svg class="map" viewBox="0 0 720 400" role="img" aria-label="Market map. Real handloom tailored clothing is the open corner where Sokhina sits.">
+          <rect x="60" y="20" width="320" height="170" fill="#F1EFEA"/>
+          <rect x="380" y="20" width="320" height="170" fill="#E6EEEA"/>
+          <rect x="60" y="190" width="320" height="170" fill="#F1EFEA"/>
+          <rect x="380" y="190" width="320" height="170" fill="#F1EFEA"/>
+          <path d="M60 190H700M380 20V360" stroke="#D9D6CE" stroke-width="1.5" fill="none"/>
+          <g font-family="Figtree,system-ui,sans-serif" font-size="13" fill="#4B5060">
+            <text x="80" y="50" font-weight="700" fill="#1A1D26">Jamdani saree sellers</text>
+            <text x="80" y="72">Haat traders, heritage craft stores,</text>
+            <text x="80" y="90">hundreds of Facebook saree pages.</text>
+            <text x="80" y="114">Crowded. Competes on price.</text>
+            <text x="400" y="50" font-weight="700" fill="#3F6B5D">Real Jamdani, tailored to wear</text>
+            <text x="400" y="72">A few small women-only labels (Oboni)</text>
+            <text x="400" y="90">and bespoke designers. Little for men.</text>
+            <text x="80" y="220" font-weight="700" fill="#1A1D26">Machine-made "Jamdani" sarees</text>
+            <text x="80" y="242">Cheap power-loom copies.</text>
+            <text x="80" y="260">Hurts trust in the real thing.</text>
+            <text x="400" y="220" font-weight="700" fill="#1A1D26">Fashion retail chains</text>
+            <text x="400" y="242">Well-cut panjabis and kurtis with</text>
+            <text x="400" y="260">printed motifs. No handloom.</text>
+            <text x="380" y="388" text-anchor="middle" fill="#7C8090">Saree only  →  Tailored clothing</text>
+            <text transform="translate(34 190) rotate(-90)" text-anchor="middle" fill="#7C8090">Machine / printed  →  Real handloom</text>
+          </g>
+          <circle cx="590" cy="140" r="40" fill="#3F6B5D"/>
+          <text x="590" y="137" text-anchor="middle" font-family="Hind Siliguri,sans-serif" font-size="18" font-weight="600" fill="#FFFFFF">সখিনা</text>
+          <text x="590" y="154" text-anchor="middle" font-family="Figtree,sans-serif" font-size="8" letter-spacing="2" fill="#E6EEEA">SOKHINA</text>
+        </svg>
+      </div>
+
+      <h3 style="font-size:1.4rem;margin-top:10px">Six places to play, in the order we should enter them</h3>
+      <div class="grid3">
+        <div class="card"><span class="rank c-sage">1</span><h3>The koti</h3><p>Lowest price, forgiving on size, giftable, and one saree makes about four. This is how a new customer tries us.</p></div>
+        <div class="card"><span class="rank c-blush">2</span><h3>Akdh family sets</h3><p>One booking dresses ten to twenty people in matching tones. Large order, planned weeks ahead, paid in advance.</p></div>
+        <div class="card"><span class="rank c-indigo">3</span><h3>Biye bari guests</h3><p>Guests need a new outfit for every wedding and are tired of the same boutique look. Wedding season runs November to February.</p></div>
+        <div class="card"><span class="rank c-sand">4</span><h3>Eid and Boishakh capsules</h3><p>One industry estimate says these two festivals make up about three quarters of local fashion sales. We need a small drop for each.</p></div>
+        <div class="card"><span class="rank c-sage">5</span><h3>Everyday and office</h3><p>Shirts, kurtis and short panjabis. Slower to build, but it is what makes customers come back between occasions.</p></div>
+        <div class="card"><span class="rank c-indigo">6</span><h3>Gifts and Bangladeshis abroad</h3><p>Corporate gifts, wedding favours and probashi buyers who want something truly from home. Kotis and pocket squares ship easily.</p></div>
+      </div>
+
+      <h3 style="font-size:1.4rem;margin-top:10px">How we reach them</h3>
+      <div class="grid4">
+        <div class="card"><h3>Facebook and Instagram</h3><p>Our shop from day one. Reports say about 80% of online lifestyle sales in Bangladesh happen through Facebook pages.</p></div>
+        <div class="card"><h3>Pop-ups and fairs</h3><p>Jamdani has to be touched. Wedding fairs, Eid exhibitions and weekend pop-ups in Dhaka.</p></div>
+        <div class="card"><h3>Wedding partners</h3><p>Planners, photographers and makeup artists meet every family before the akdh. Give them a referral fee.</p></div>
+        <div class="card"><h3>Made to measure</h3><p>Send measurements on WhatsApp. Fewer returns, less unsold stock, and a reason to pay more.</p></div>
+      </div>
+
+      <h3 style="font-size:1.4rem;margin-top:10px">Our selling year</h3>
+      <div class="cal">
+        <div class="mo hot"><b>Nov</b><span>Wedding season opens. Koti launch.</span></div>
+        <div class="mo hot"><b>Dec</b><span>Peak weddings. Akdh sets.</span></div>
+        <div class="mo hot"><b>Jan</b><span>Peak weddings. Pop-ups.</span></div>
+        <div class="mo fest"><b>Feb</b><span>Pohela Falgun. Last weddings.</span></div>
+        <div class="mo fest"><b>Mar</b><span>Eid ul-Fitr, expected March 2027.</span></div>
+        <div class="mo fest"><b>Apr</b><span>Pohela Boishakh.</span></div>
+        <div class="mo fest"><b>May</b><span>Eid ul-Adha, expected May 2027.</span></div>
+        <div class="mo"><b>Jun</b><span>Quiet. Everyday line.</span></div>
+        <div class="mo"><b>Jul</b><span>Quiet. Commission weaving.</span></div>
+        <div class="mo"><b>Aug</b><span>Sampling for winter.</span></div>
+        <div class="mo"><b>Sep</b><span>Photoshoot and pre-orders.</span></div>
+        <div class="mo fest"><b>Oct</b><span>Durga Puja.</span></div>
+      </div>
+    </section>
+
+    <section class="blk">
+      <div class="eyebrow">The collection</div>
+      <h2>One hundred and two looks, one fabric</h2>
+      <div class="read">
+        <p><b>56 looks for her and 46 for him</b>, designed for how Bangladesh actually dresses: the office and the campus, Eid and Boishakh, Ekushey and Puja, the holud, the akdh, and a winter of biye baris. Every piece is in a soft, muted colour. Western shapes sit beside the saree, the three-piece, the sharara, the panjabi and the kabli set.</p>
+        <p>21 of the women's looks are sleeveless, including four sleeveless blouses, and each has a matching sheer cover-up. There is now a full mix-and-match wardrobe as well: blouses, tops, salwars and culottes for her, pajamas, sets and a polo for him. There are fully covered pieces too, including a long coat, a maxi shirt dress and an office kurti that work with a hijab. The menswear now goes past the panjabi: a resort set, a wrap jacket, pleated Jamdani trousers, a long vest, a shawl-collar jacket and a bomber.</p>
+      </div>
+      <h3 style="font-size:1.4rem;margin-top:6px">Five signatures</h3>
+      <p class="read">A fashion house is remembered for a few pieces it repeats every season in new colours. These are ours.</p>
+      <div class="sig">
+        <figure><img loading="lazy" src="img/m01.jpg" alt="Sage Jamdani koti"><b>The koti</b><span>Our jacket. For him and for her, in every colour of the season.</span></figure>
+        <figure><img loading="lazy" src="img/w18b.jpg" alt="Dove grey Jamdani shift dress"><b>The little dove dress</b><span>One soft grey dress that goes with everything.</span></figure>
+        <figure><img loading="lazy" src="img/w19b.jpg" alt="The Dhaka suit"><b>The Dhaka suit</b><span>Collarless jacket and skirt, with the paar as trim.</span></figure>
+        <figure><img loading="lazy" src="img/w13b.jpg" alt="White Jamdani saree with a soft rose border"><b>The saree, uncut</b><span>We still sell the whole saree, with a blouse cut for today.</span></figure>
+        <figure><img loading="lazy" src="img/w24b.jpg" alt="Peacock blue Jamdani blouse"><b>The Jamdani blouse</b><span>The entry piece for women who already own sarees.</span></figure>
+      </div>
+    </section>
+
+    <section class="blk">
+      <div class="eyebrow">Showpieces</div>
+      <h2>Six pieces made to stop the scroll</h2>
+      <div class="read"><p>Fashion houses make a few pieces to be photographed and talked about, and many more to be bought. These six are the first kind: a Jamdani trench, a cape gown, a full suit, a denim jacket with a Jamdani back, a bridal robe and a saree with pockets. <b>They earn the attention. The koti, the blouses and the pajamas earn the money.</b></p></div>
+      <div class="bk" data-chapters="show" style="display:flex;flex-direction:column;gap:26px"></div>
+    </section>
+
+    <section class="blk">
+      <div class="eyebrow">For her</div>
+      <div class="ghead"><h2>Women</h2><span>56 looks · dresses, gowns, sets, sarees, blouses, salwars and layers</span></div>
+      <div data-gallery="pitch" data-who="her"></div>
+    </section>
+
+    <section class="blk">
+      <div class="eyebrow">For him</div>
+      <div class="ghead"><h2>Men</h2><span>46 looks · panjabis, kotis, shirts, pajamas, sets and wedding wear</span></div>
+      <div data-gallery="pitch" data-who="him"></div>
+    </section>
+
+    <section class="blk">
+      <div class="eyebrow">Made to match</div>
+      <h2>The jora: his and hers from the same cloth</h2>
+      <div class="read"><p>Couples and families here love to match. Each jora is cut from sarees woven together, so the colour and motif are identical. It doubles the order, and it is something a saree shop cannot offer.</p></div>
+      <div class="pairs" data-pairs></div>
+      <p class="note">All photographs are AI-generated design concepts, made to show cut, colour and motif placement. They are not finished garments. Replace them with real photographs once samples are stitched.</p>
+    </section>
+
+    <section class="blk">
+      <div class="eyebrow">The design code</div>
+      <h2>Twelve criteria every Sokhina piece is designed by</h2>
+      <div class="scroll">
+        <table>
+          <tr><th>Criterion</th><th>The options</th><th>Our rule</th></tr>
+          <tr><td><b>1. Occasion</b></td><td>Everyday, festive day, akdh, biye bari</td><td>Every piece must work for at least two.</td></tr>
+          <tr><td><b>2. Silhouette</b></td><td>Column, A-line, wrap, fit and flare, tiered, sheath, gown, co-ord, jumpsuit</td><td>Simple shapes. The cloth is the decoration.</td></tr>
+          <tr><td><b>3. Sleeve</b></td><td>Sleeveless, cap, short, full sheer, layered</td><td>Every sleeveless piece has a matching cover-up.</td></tr>
+          <tr><td><b>4. Neckline</b></td><td>Boat, V, square, halter, mandarin, one shoulder</td><td>Necklines are faced in plain cloth so the motifs never distort.</td></tr>
+          <tr><td><b>5. Length</b></td><td>Knee, midi, ankle, floor</td><td>Midi and ankle first. They suit the most people.</td></tr>
+          <tr><td><b>6. Colour</b></td><td>Soft pastels by day, dusk tones for evening</td><td>One colour per piece. Motif thread is tonal or metallic, never loud.</td></tr>
+          <tr><td><b>7. Motif</b></td><td>Duria, butidar, tercha, jhalar</td><td>Small motifs near the face, larger ones toward the hem.</td></tr>
+          <tr><td><b>8. Border</b></td><td>Hem, waistband, placket, front edge, cape edge</td><td>The paar always has a job. It is never cut away.</td></tr>
+          <tr><td><b>9. Lining</b></td><td>Full slip, bodice only, unlined dense weave</td><td>Nothing is see-through unless it is meant to be a layer.</td></tr>
+          <tr><td><b>10. Fit</b></td><td>Ties, wraps, elastic back, side zips</td><td>Each size should forgive five centimetres either way.</td></tr>
+          <tr><td><b>11. Cloth use</b></td><td>A quarter, half, one or one and a half sarees</td><td>Pattern pieces are planned so offcuts become kotis and trims.</td></tr>
+          <tr><td><b>12. Wear again</b></td><td>Restyle with a koti, a belt or a duster</td><td>The three-wedding test: if it cannot be worn three times, we do not make it.</td></tr>
+        </table>
+      </div>
+      <h3 style="font-size:1.4rem;margin-top:10px">The price ladder</h3>
+      <div class="grid4">
+        <div class="card t-sand" style="border-color:transparent"><h3>Entry</h3><p><b>Under Tk 5,000.</b> Koti, pocket squares, potli bags. The first purchase.</p></div>
+        <div class="card t-sage" style="border-color:transparent"><h3>Core</h3><p><b>Tk 6,000 to 9,000.</b> Day dresses, shirts, panjabis, the long koti.</p></div>
+        <div class="card t-blush" style="border-color:transparent"><h3>Occasion</h3><p><b>Tk 10,000 to 16,000.</b> Akdh pieces, co-ords, maxis and layered sets.</p></div>
+        <div class="card t-indigo" style="border-color:transparent"><h3>Statement</h3><p><b>Tk 18,000 to 28,000.</b> Gowns in finer Jamdani, made to order.</p></div>
+      </div>
+      <p class="note">Price bands are illustrative, like the cost figures below.</p>
+    </section>
+
+    <section class="blk">
+      <div class="eyebrow">How it works</div>
+      <h2>From the Friday haat to the customer</h2>
+      <div class="grid4">
+        <div class="card t-sage" style="border-color:transparent"><h3>1. Source</h3><p>Buy at the Friday dawn haats in Noapara (the BSCIC Jamdani village) and Demra, then commission yardage directly from three or four weaver families.</p></div>
+        <div class="card t-sand" style="border-color:transparent"><h3>2. Design</h3><p>Plan each cut around the cloth: the paar becomes a hem or placket, the anchal becomes a koti front, the body becomes shirts and kurtis.</p></div>
+        <div class="card t-blush" style="border-color:transparent"><h3>3. Tailor</h3><p>Jamdani is sheer and loosely woven. Every piece is lined, seams are bound, and sizes are tested on real people.</p></div>
+        <div class="card t-indigo" style="border-color:transparent"><h3>4. Sell</h3><p>Each piece carries a card naming the weaver, the village and the days it took. That card is our proof against machine-made copies.</p></div>
+      </div>
+      <div class="read"><p><b>Nothing woven by hand is thrown away.</b> Offcuts become koti trims, potli bags, pocket squares and hair ties, which also gives us gift items under Tk 1,000.</p></div>
+    </section>
+
+    <section class="blk">
+      <div class="eyebrow">The numbers</div>
+      <h2>What one piece costs and earns</h2>
+      <div class="read"><p>These figures are illustrative. They assume a mid-range cotton handloom Jamdani saree bought at about Tk 6,000 and about 5.5 metres long. Replace them with real haat and tailor quotes before you present.</p></div>
+      <div class="scroll">
+        <table>
+          <tr><th>Piece</th><th>From one saree</th><th class="n">Fabric</th><th class="n">Lining and making</th><th class="n">Cost</th><th class="n">Price</th><th class="n">Margin</th></tr>
+          <tr><td>Koti</td><td>4 pieces</td><td class="n">1,500</td><td class="n">700</td><td class="n">2,200</td><td class="n">4,500</td><td class="n">51%</td></tr>
+          <tr><td>Panjabi</td><td>2 pieces</td><td class="n">3,000</td><td class="n">900</td><td class="n">3,900</td><td class="n">7,500</td><td class="n">48%</td></tr>
+          <tr><td>Kurti or shirt</td><td>2 pieces</td><td class="n">3,000</td><td class="n">800</td><td class="n">3,800</td><td class="n">6,500</td><td class="n">42%</td></tr>
+          <tr><td>Midi dress, fully lined</td><td>2 pieces</td><td class="n">3,000</td><td class="n">1,400</td><td class="n">4,400</td><td class="n">8,500</td><td class="n">48%</td></tr>
+          <tr><td>Statement piece (finer Tk 12,000 saree)</td><td>1 piece</td><td class="n">12,000</td><td class="n">2,500</td><td class="n">14,500</td><td class="n">22,000</td><td class="n">34%</td></tr>
+        </table>
+      </div>
+      <h3 style="font-size:1.4rem;margin-top:10px">A first capsule of 40 pieces</h3>
+      <div class="scroll">
+        <table>
+          <tr><th>Item</th><th>Detail</th><th class="n">Taka</th></tr>
+          <tr><td>Fabric</td><td>13 sarees at 6,000 and 4 finer sarees at 12,000</td><td class="n">126,000</td></tr>
+          <tr><td>Lining and tailoring</td><td>20 kotis, 8 panjabis, 8 kurtis and shirts, 4 statement pieces</td><td class="n">37,600</td></tr>
+          <tr><td>Photoshoot, packaging, page ads</td><td>25,000 + 8,000 + 20,000</td><td class="n">53,000</td></tr>
+          <tr><td>Samples and contingency</td><td>15% of the above</td><td class="n">32,500</td></tr>
+          <tr class="sum"><td>Money needed</td><td>About Tk 2.5 lakh</td><td class="n">249,100</td></tr>
+          <tr><td>Sales if all 40 sell at full price</td><td>90,000 + 60,000 + 52,000 + 88,000</td><td class="n">290,000</td></tr>
+        </table>
+      </div>
+      <div class="read"><p><b>Where dresses fit:</b> the capsule below leads with the koti because it sells fastest and needs the least cloth. Dresses are the second drop, once there is a customer list, and they are what the photographs and the brand will be known for.</p><p><b>Read this honestly:</b> the first capsule roughly pays for itself and leaves about Tk 41,000. Its real job is to prove people will buy, and to leave us with photographs, a customer list and tested patterns. Profit comes from the second run, when the one-time costs are gone and the product margin is about 44%.</p></div>
+    </section>
+
+    <section class="blk">
+      <div class="eyebrow">The first 12 weeks</div>
+      <h2>Ready for this wedding season</h2>
+      <div class="steps">
+        <div class="card" data-w="1 to 3"><h3>Source</h3><p>Three Friday visits to Noapara and Demra. Choose weavers. Buy ten sarees and order yardage.</p></div>
+        <div class="card" data-w="3 to 6"><h3>Sample</h3><p>Stitch twelve styles. Fit them on five real people. Fix lining and sizing.</p></div>
+        <div class="card" data-w="6 to 8"><h3>Show</h3><p>Photoshoot. Open the Facebook and Instagram pages. Take koti pre-orders.</p></div>
+        <div class="card" data-w="8 to 12"><h3>Sell</h3><p>First pop-up. Deliver wedding orders. Book the first akdh family sets.</p></div>
+      </div>
+    </section>
+
+    <section class="blk">
+      <div class="eyebrow">Hard questions</div>
+      <h2>What people will ask, and our answers</h2>
+      <div class="grid2">
+        <div class="card"><h3>"Is it wrong to cut a Jamdani saree?"</h3><p>We cut mid-range sarees and commissioned yardage, never heirloom pieces, and every offcut is used. The weaver earns more when the cloth is bought more often.</p></div>
+        <div class="card"><h3>"How do I know it is real?"</h3><p>Handloom only. Each piece has a weaver card, and we show customers how to check the back of the cloth themselves.</p></div>
+        <div class="card"><h3>"Will it tear or go see-through?"</h3><p>Every piece is fully lined with bound seams, and comes with a care card. We repair our own pieces.</p></div>
+        <div class="card"><h3>"Someone already does this."</h3><p>A few small labels make Jamdani fusion for women. Almost nobody serves men, family sets or the koti as a hero product. That is our space.</p></div>
+        <div class="card"><h3>"It is too expensive."</h3><p>The koti and the small accessories keep the entry price low. A statement piece is still far below bespoke bridal prices.</p></div>
+        <div class="card"><h3>"Can supply keep up?"</h3><p>Handloom is slow, so we sell in small numbered drops and pre-orders. Scarcity is part of the appeal.</p></div>
+        <div class="card"><h3>"Will sleeveless sell here?"</h3><p>Every sleeveless dress is sold with a matching sheer shrug, cape or duster. One design serves both customers, and the layer is an extra sale.</p></div>
+        <div class="card"><h3>"Why dresses, when kameez sets sell?"</h3><p>Kameez sets are everywhere. A lined Jamdani dress is rare, photographs beautifully, and suits buyers abroad as well as at home.</p></div>
+      </div>
+    </section>
+
+    <section class="blk" style="border-bottom:0">
+      <div class="eyebrow">The ask</div>
+      <h2>About Tk 2.5 lakh for the first capsule</h2>
+      <div class="read">
+        <p>It buys 17 sarees from Rupganj weavers, pays for lining and tailoring of 40 pieces, and covers the first photoshoot and launch. In return we offer a share or a repayment plan, to be agreed with you.</p>
+        <p class="tagline">Wear the heritage. Don't store it.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== BROCHURE ===================== -->
+  <div id="brochure" class="bk" role="tabpanel" aria-labelledby="tab-brochure" hidden>
+    <div class="bcov">
+      <span class="lab">The Jamdani lookbook · Volume one</span>
+      <span class="bn">সখিনা</span>
+      <span class="en">SOKHINA</span>
+      <div class="big">Jamdani, protidin.</div>
+      <p class="txt">Handwoven in Rupganj. Cut for the days you actually live.</p>
+      <div class="trio"><img src="img/d07.jpg" alt="Powder blue Jamdani tea dress"><img src="img/z01.jpg" alt="Sage Jamdani resort set for men"><img src="img/w13b.jpg" alt="White Jamdani saree with a soft rose border"></div>
+      <span class="lab">56 looks for her · 46 for him · pieces for children</span>
+    </div>
+
+    <section>
+      <span class="lab">Inside</span>
+      <ol class="toc">
+        <li><b>01</b><span>Her name</span><small>Who Sokhina is</small></li>
+        <li><b>02</b><span>The cloth</span><small>Motifs, and how to tell it is real</small></li>
+        <li><b>03</b><span>Signatures</span><small>Five pieces we always make</small></li>
+        <li><b>04</b><span>Showpieces</span><small>Six to stop the scroll</small></li>
+        <li><b>05</b><span>Women</span><small>52 looks in six chapters</small></li>
+        <li><b>06</b><span>Men</span><small>44 looks in six chapters</small></li>
+        <li><b>07</b><span>Jora and family</span><small>His, hers and the children's</small></li>
+        <li><b>08</b><span>Small things</span><small>Gifts made from every offcut</small></li>
+        <li><b>09</b><span>Size, care, order</span><small>Everything practical</small></li>
+      </ol>
+    </section>
+
+    <section>
+      <span class="lab">01 · Her name</span>
+      <div class="two">
+        <img loading="lazy" src="img/b01.jpg" alt="A weaver at a wooden handloom, placing a thread into sage Jamdani cloth">
+        <div class="col">
+          <div class="big">This is Sokhina's work.</div>
+          <p class="sub">Every motif on your piece was placed by hand, one thread at a time, on a loom beside the Shitalakshya.</p>
+          <p class="txt">Sokhina is the name of the woman at the loom, and of every weaver whose name was never put on a label. We put it on ours. Inside each box is a card with the name of the person who wove your cloth, their village, and the number of days it took.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <span class="lab">02 · The cloth</span>
+      <div class="two">
+        <div class="col">
+          <div class="big">Woven in, never printed.</div>
+          <p class="txt">Jamdani is fine cotton muslin with each motif added by hand as the cloth is woven. One length can take weeks. UNESCO lists the craft as cultural heritage, and the name belongs to Bangladesh.</p>
+          <p class="txt"><b>Three checks you can do yourself.</b> Turn it over: the back is almost as neat as the front. Look closely: no two butis are perfectly alike. Read the card: it names the weaver.</p>
+        </div>
+        <img loading="lazy" src="img/b02.jpg" alt="Close-up of Jamdani motifs being woven by hand on the loom">
+      </div>
+      <div class="grid4" data-swatches></div>
+    </section>
+
+    <section>
+      <span class="lab">03 · Signatures</span>
+      <div class="big">Five pieces we always make.</div>
+      <div class="sig">
+        <figure><img loading="lazy" src="img/m01.jpg" alt="Sage Jamdani koti"><b>The Buti koti</b><span>For him and for her, in every colour of the season.</span></figure>
+        <figure><img loading="lazy" src="img/w18b.jpg" alt="Dove grey Jamdani shift dress"><b>The little dove dress</b><span>One soft grey dress that goes with everything.</span></figure>
+        <figure><img loading="lazy" src="img/w19b.jpg" alt="The Dhaka suit"><b>The Dhaka suit</b><span>Collarless jacket and skirt, the paar as trim.</span></figure>
+        <figure><img loading="lazy" src="img/w13b.jpg" alt="White Jamdani saree with a soft rose border"><b>The saree, uncut</b><span>The whole saree, with a blouse cut for today.</span></figure>
+        <figure><img loading="lazy" src="img/x05.jpg" alt="Peach Jamdani orna over an ivory kameez"><b>The Sokhina orna</b><span>One orna over the three-piece you already own.</span></figure>
+      </div>
+    </section>
+
+    <section>
+      <span class="lab">04 · Showpieces</span>
+      <div class="big">The ones people talk about.</div>
+      <div data-chapters="show" style="display:flex;flex-direction:column;gap:26px"></div>
+    </section>
+
+    <section>
+      <span class="lab">05 · Women</span>
+      <div class="big">For her.</div>
+      <p class="txt">Every sleeveless piece comes with a matching sheer cover-up if you want one. Every piece is lined.</p>
+      <div data-chapters="her" style="display:flex;flex-direction:column;gap:26px"></div>
+    </section>
+
+    <section>
+      <span class="lab">06 · Men</span>
+      <div class="big">For him.</div>
+      <p class="txt">From a campus fatua to the akdh sherwani, with a few things he has not seen in Jamdani before.</p>
+      <div data-chapters="him" style="display:flex;flex-direction:column;gap:26px"></div>
+    </section>
+
+    <section>
+      <span class="lab">07 · Jora and family</span>
+      <div class="big">Cut from the same cloth.</div>
+      <p class="txt">A jora is his and hers, made from sarees woven together so the colour and motif match exactly. Ask us about sets for the whole family.</p>
+      <div class="grid2" style="gap:26px">
+        <figure class="bl"><img loading="lazy" src="img/f02.jpg" alt="A couple in matching blush Jamdani, she in a dress and shrug, he in a panjabi" style="aspect-ratio:5/4"><span class="code"><i style="background:#EFC9C6"></i>Jora / Petal blush</span><h4>For the two of you</h4><span class="cut">Her dress and his panjabi, woven as one order.</span></figure>
+        <figure class="bl"><img loading="lazy" src="img/f01.jpg" alt="A family of four in matching sage Jamdani" style="aspect-ratio:5/4"><span class="code"><i style="background:#C5D3BE"></i>Family set / Sage</span><h4>For all four of you</h4><span class="cut">Koti, kameez, little koti and frock for Eid morning.</span></figure>
+      </div>
+      <div class="pairs" data-pairs></div>
+      <div class="bch"><span class="lab">Choto Sokhina</span><h3>And the little ones</h3><p class="txt">Children's pieces are cut from the same cloth as their parents', fully lined in soft cotton.</p></div>
+      <div class="kids">
+        <figure class="bl"><img loading="lazy" src="img/k01.jpg" alt="A girl in a pink Jamdani frock"><span class="code"><i style="background:#F2B8C6"></i>C01 / Golap pink</span><h4>Puff-sleeve frock</h4><span class="cut">Gathered skirt; paar at the hem; ages 2 to 10.</span></figure>
+        <figure class="bl"><img loading="lazy" src="img/k02.jpg" alt="A boy in a sage Jamdani koti over a white panjabi"><span class="code"><i style="background:#C5D3BE"></i>C02 / Sage</span><h4>Little Buti koti</h4><span class="cut">Matches his father's koti; ages 2 to 10.</span></figure>
+        <figure class="bl"><img loading="lazy" src="img/k03.jpg" alt="A girl twirling in a marigold Jamdani skirt set"><span class="code"><i style="background:#EDB548"></i>C03 / Marigold</span><h4>Gada skirt set</h4><span class="cut">For the holud; matches the gada sharara.</span></figure>
+        <figure class="bl"><img loading="lazy" src="img/k04.jpg" alt="A boy in a powder blue Jamdani panjabi"><span class="code"><i style="background:#BFD6EA"></i>C04 / Powder sky</span><h4>Little panjabi</h4><span class="cut">Sparse white buti; ages 2 to 12.</span></figure>
+      </div>
+    </section>
+
+    <section>
+      <span class="lab">08 · Small things</span>
+      <div class="two">
+        <img loading="lazy" src="img/b03.jpg" alt="Jamdani potli bag, pocket squares, scrunchies and a notebook laid flat">
+        <div class="col">
+          <div class="big">Nothing woven by hand is thrown away.</div>
+          <p class="txt">Every offcut becomes something small: potli bags, pocket squares, hair ties, covered notebooks and card holders. They make good gifts, wedding favours and corporate presents, and they let anyone own a piece of Jamdani.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="border-bottom:0">
+      <span class="lab">09 · Size, care, order</span>
+      <div class="big">Everything practical.</div>
+      <div class="sizes">
+        <div class="scroll"><table>
+          <tr><th>Women</th><th class="n">Bust</th><th class="n">Waist</th><th class="n">Hip</th></tr>
+          <tr><td>S</td><td class="n">34 in</td><td class="n">28 in</td><td class="n">37 in</td></tr>
+          <tr><td>M</td><td class="n">36 in</td><td class="n">30 in</td><td class="n">39 in</td></tr>
+          <tr><td>L</td><td class="n">38 in</td><td class="n">32 in</td><td class="n">41 in</td></tr>
+          <tr><td>XL</td><td class="n">40 in</td><td class="n">34 in</td><td class="n">43 in</td></tr>
+          <tr><td>XXL</td><td class="n">42 in</td><td class="n">36 in</td><td class="n">45 in</td></tr>
+        </table></div>
+        <div class="scroll"><table>
+          <tr><th>Men</th><th class="n">Chest</th><th class="n">Panjabi length</th><th class="n">Koti length</th></tr>
+          <tr><td>S</td><td class="n">38 in</td><td class="n">40 in</td><td class="n">25 in</td></tr>
+          <tr><td>M</td><td class="n">40 in</td><td class="n">42 in</td><td class="n">26 in</td></tr>
+          <tr><td>L</td><td class="n">42 in</td><td class="n">44 in</td><td class="n">27 in</td></tr>
+          <tr><td>XL</td><td class="n">44 in</td><td class="n">46 in</td><td class="n">28 in</td></tr>
+          <tr><td>XXL</td><td class="n">46 in</td><td class="n">46 in</td><td class="n">29 in</td></tr>
+        </table></div>
+      </div>
+      <p class="note">Draft size chart. Confirm every measurement with your pattern master before printing. Made to measure is available on every piece.</p>
+      <div class="grid3">
+        <div class="card"><h3>Care</h3><ul><li>Dry clean, or hand wash gently in cold water</li><li>Do not wring or brush</li><li>Dry flat in the shade</li><li>Iron on low heat, on the lining side</li></ul></div>
+        <div class="card"><h3>Keeping it</h3><ul><li>Fold in soft cotton, never plastic</li><li>Refold along new lines every few months</li><li>Keep away from perfume and sunlight</li><li>A pulled thread? Bring it back and we mend it</li></ul></div>
+        <div class="card"><h3>Ordering</h3><ul><li>Message us with the look code, such as W07 or M23</li><li>Choose a size or send your measurements</li><li>Book family and wedding sets three to four weeks ahead</li><li>Delivery across Bangladesh</li></ul></div>
+      </div>
+      <div class="contact">
+        <div class="mark"><span class="bn" style="font-size:2.2rem">সখিনা</span><span class="en">SOKHINA</span></div>
+        <h2>Wear the heritage. Don't store it.</h2>
+        <p>Dhaka, Bangladesh.</p>
+        <p class="todo">To add before printing: phone and WhatsApp number, Facebook and Instagram page names, and prices for each look.</p>
+      </div>
+      <p class="note">Images are design concepts generated with AI. Your piece is cut from handwoven cloth, so the motifs on it will be its own.</p>
+    </section>
+  </div>
+
+  <div class="paar thin" aria-hidden="true" style="margin-top:48px"><svg preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="url(#paarTop)"/></svg></div>
+  <footer>
+    <span>Market facts come from press reports, several of them a few years old, so confirm them before quoting: <a href="https://thefinancialexpress.com.bd/views/major-markets-of-woven-fabric-in-bangladesh-1574432553">Financial Express on the Demra and Noapara haats</a>, <a href="https://www.tbsnews.net/node/273124">TBS on Oboni</a>, <a href="https://www.thedailystar.net/business/economy/news/digital-sales-take-eid-nears-3007506">Daily Star on Facebook sales</a>, <a href="https://bd.apparelresources.com/business-news/retail/retailers-gear-eid-shopping-frenzy/">Apparel Resources on festival sales</a>.</span>
+    <span>All prices, costs and margins on this page are illustrative assumptions, not quotes.</span>
+    <span>The outfit photographs are AI-generated design concepts, not photographs of finished garments.</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  /* ---------- Jamdani pattern + garment sketches ---------- */
+  var n = 0;
+  function px(rows, x, y, c){
+    var d = '';
+    rows.forEach(function(r, j){ for (var i = 0; i < r.length; i++) if (r[i] === '#') d += 'M' + (x + i*c).toFixed(1) + ' ' + (y + j*c).toFixed(1) + 'h' + c + 'v' + c + 'h-' + c + 'z'; });
+    return d;
+  }
+  var BUTI = ['...#...','..###..','.##.##.','##.#.##','.##.##.','..###..','...#...'];
+  var PLUS = ['.#.','###','.#.'];
+  function pat(id, kind, col){
+    if (kind === 'jaal') return '<pattern id="'+id+'" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M9 0L18 9L9 18L0 9Z" fill="none" stroke="'+col+'" stroke-width="1"/><path d="'+px(PLUS,7.2,7.2,1.2)+'" fill="'+col+'"/></pattern>';
+    if (kind === 'tercha') return '<pattern id="'+id+'" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="14" height="1.1" fill="'+col+'"/><path d="'+px(PLUS,5.5,6,1.1)+'" fill="'+col+'"/></pattern>';
+    if (kind === 'duria') return '<pattern id="'+id+'" width="9" height="9" patternUnits="userSpaceOnUse"><path d="M1 1h1.7v1.7H1zM5.5 5.5h1.7v1.7H5.5z" fill="'+col+'"/></pattern>';
+    return '<pattern id="'+id+'" width="26" height="26" patternUnits="userSpaceOnUse"><path d="'+px(BUTI,2,2,1.3)+px(BUTI,15,15,1.3)+'" fill="'+col+'"/></pattern>';
+  }
+  function paar(id, col, y){
+    return '<pattern id="'+id+'" width="14" height="22" y="'+y+'" patternUnits="userSpaceOnUse"><path d="M0 0h14v1.4H0zM0 20.6h14V22H0zM0 18L7 5l7 13z" fill="'+col+'"/></pattern>';
+  }
+  var C = {
+    sage:{base:'#DCE8E2', motif:'#3F6B5D'}, sky:{base:'#DDE6F2', motif:'#4F5F8F'},
+    sand:{base:'#EFE6D2', motif:'#7A6A45'}, blush:{base:'#F3DCDA', motif:'#9A5B5E'}
+  };
+
+  /* ---------- the looks ---------- */
+  var SPEC = ['Silhouette','Neckline','Sleeve','Length','Motif','Border','Lining','Cover-up','Cloth','Tier'];
+  var OCC = {everyday:'Everyday', festive:'Festive day', akdh:'Akdh', biye:'Biye bari'};
+  var LOOKS = [{"c": "W01", "img": "d01", "n": "Shitalakshya column", "col": "Pearl Ivory", "hex": "#EEE8DA", "who": "her", "ty": "dress", "occ": ["akdh", "biye"], "cut": "sl", "t": "The quietest dress in the room, and the one people remember.", "s": ["Column", "Boat neck", "Sleeveless", "Ankle, side slit", "Sparse gold buti", "Paar at the hem", "Full cotton slip", "Sheer ivory duster", "Half a saree", "Occasion"]}, {"c": "W02", "img": "d02", "n": "Noapara shirt dress", "col": "Pale Sage", "hex": "#CBD5C0", "who": "her", "ty": "dress", "occ": ["everyday"], "cut": "sl", "t": "A shirt dress for the office that still reads as Jamdani from across the room.", "s": ["Shirt dress, belted", "Shirt collar", "Sleeveless", "Midi", "All-over ivory buti", "Hem and belt", "Body lined", "Cropped shrug", "Half a saree", "Core"]}, {"c": "W03", "img": "d03", "n": "Falgun wrap", "col": "Buttercream", "hex": "#EBDDA4", "who": "her", "ty": "dress", "occ": ["festive", "everyday"], "cut": "sv", "t": "A wrap that ties to fit, in the yellow of Pohela Falgun.", "s": ["Wrap dress", "V neck", "Cap sleeve", "Midi", "Cream buti", "Along the wrap edge", "Fully lined", "Not needed", "Half a saree", "Core"]}, {"c": "W04", "img": "d04b", "n": "Dusk halter gown", "col": "Dusty Slate", "hex": "#A9B8C8", "who": "her", "ty": "gown", "occ": ["biye"], "cut": "sl", "t": "For the reception. Silver-white motifs on a soft slate, with a wide paar that sweeps the floor.", "s": ["Halter gown, soft flare", "Halter", "Sleeveless", "Floor", "Silver jhalar and buti", "Wide paar at the hem", "Fully lined", "Sheer slate cape", "One and a half sarees", "Statement"]}, {"c": "W05", "img": "d05", "n": "Blush tiered maxi", "col": "Petal Blush", "hex": "#EFC9C6", "who": "her", "ty": "dress", "occ": ["festive", "everyday"], "cut": "sl", "t": "Three soft tiers that move when you walk. Made for Eid morning and long lunches.", "s": ["Tiered maxi", "Square neck", "Sleeveless, wide straps", "Ankle", "Ivory buti", "Narrow border on each tier", "Lined to the knee", "Cropped shrug", "One saree", "Occasion"]}, {"c": "W06", "img": "d06", "n": "Mauve sheath and cape", "col": "Dusty Mauve", "hex": "#B9929F", "who": "her", "ty": "dress", "occ": ["akdh", "biye"], "cut": "sv", "t": "A sharp sheath softened by a sheer cape. Take the cape off for dinner.", "s": ["Sheath", "Round neck", "Sleeveless under a cape", "Knee", "Pearl buti", "On the cape edge", "Fully lined", "Cape included", "One saree", "Occasion"]}, {"c": "W07", "img": "d07", "n": "Powder tea dress", "col": "Powder Sky", "hex": "#BFD6EA", "who": "her", "ty": "dress", "occ": ["everyday", "festive"], "cut": "sl", "t": "The paar becomes the waistband. The most flattering shape we make.", "s": ["Fit and flare", "V neck", "Sleeveless", "Midi", "White buti", "Waistband and hem", "Fully lined", "Cropped shrug", "One saree", "Core"]}, {"c": "W08", "img": "d08", "n": "Pearl slip and duster", "col": "Pearl Grey", "hex": "#DADAD4", "who": "her", "ty": "layer", "occ": ["akdh", "festive"], "cut": "sv", "t": "A plain slip under a sheer Jamdani duster. Fully covered, and still light.", "s": ["Slip dress with long duster", "V neck slip", "Full sheer sleeve", "Floor", "White buti on the duster", "Wide, down the front edge", "Slip is the lining", "Duster included", "One saree", "Occasion"]}, {"c": "W09", "img": "d09b", "n": "Eucalyptus anchal gown", "col": "Eucalyptus", "hex": "#B9D2C6", "who": "her", "ty": "saree", "occ": ["biye"], "cut": "sl", "t": "A saree you step into. Pre-draped and stitched, with the anchal left free.", "s": ["Pre-draped saree gown", "One shoulder", "Sleeveless", "Floor", "Gold buti", "Wide paar on anchal and hem", "Lined, side zip", "Matching blouse option", "One saree, almost uncut", "Statement"]}, {"c": "W10", "img": "d10", "n": "Pistachio co-ord", "col": "Soft Pistachio", "hex": "#C9D7A6", "who": "her", "ty": "set", "occ": ["festive", "akdh"], "cut": "sl", "t": "Peplum top and wide palazzo. Wear together for a holud, apart for everything else.", "s": ["Peplum top and palazzo", "Round neck", "Sleeveless", "Full-length trousers", "Cream buti", "Peplum and trouser hems", "Fully lined", "Cropped shrug", "One saree", "Occasion"]}, {"c": "W11", "img": "d11", "n": "Lilac mandarin dress", "col": "Pale Lilac", "hex": "#D9CDE3", "who": "her", "ty": "dress", "occ": ["everyday"], "cut": "sl", "t": "Office to dinner. A band collar and keyhole keep it neat without a necklace.", "s": ["A-line", "Mandarin collar, keyhole", "Sleeveless", "Midi", "Grey-white buti", "At the hem", "Fully lined", "Blazer or shrug", "Half a saree", "Core"]}, {"c": "W12", "img": "d12", "n": "Slate jumpsuit", "col": "Slate Blue", "hex": "#6F8BA8", "who": "her", "ty": "set", "occ": ["festive", "everyday"], "cut": "sl", "t": "The modern one. A wide paar at the ankle does all the talking.", "s": ["Wide-leg jumpsuit", "V neck", "Sleeveless", "Ankle", "Ivory buti", "Wide, at the trouser hems", "Fully lined", "Short jacket", "One saree", "Occasion"]}, {"c": "W13", "img": "m02b", "n": "Long rose koti", "col": "Rose Clay", "hex": "#D8B4AE", "who": "her", "ty": "layer", "occ": ["biye", "akdh"], "cut": "sv", "t": "A long open koti that turns a plain kameez into a wedding outfit.", "s": ["Long open koti", "Open front", "Layer over a kameez", "Calf", "Ivory buti", "Down the front and hem", "Fully lined", "Is the layer", "Half a saree", "Core"]}, {"c": "W14", "img": "w13b", "n": "Boishakhi saree", "col": "White and Rose", "hex": "#CFA0A6", "who": "her", "ty": "saree", "occ": ["festive"], "cut": "sl", "t": "The saree, left whole. Soft rose on white for Pohela Boishakh, with a blouse cut for today.", "s": ["Uncut saree, tailored blouse", "Round neck blouse", "Sleeveless blouse", "Floor", "Rose buti on white", "Wide rose paar, kept whole", "Blouse lined", "Elbow-sleeve blouse option", "One saree, uncut", "Occasion"]}, {"c": "W15", "img": "w14", "n": "Golap three-piece", "col": "Soft Rose", "hex": "#E3A9A9", "who": "her", "ty": "set", "occ": ["akdh", "festive"], "cut": "sv", "t": "The salwar kameez every mother asks for, in a rose that flatters every age.", "s": ["Straight kameez, trousers, orna", "Round neck", "Full sleeve", "Knee-length kameez", "Ivory buti", "Orna ends and kameez hem", "Kameez lined", "Orna included", "One and a half sarees", "Occasion"]}, {"c": "W16", "img": "w15", "n": "Balu long coat", "col": "Warm Sand", "hex": "#E2D3B5", "who": "her", "ty": "layer", "occ": ["everyday", "festive", "akdh"], "cut": "sv", "t": "A full-length open coat for modest dressing. Jamdani worn as the outer layer over anything plain.", "s": ["Open-front long coat", "Collarless", "Full sleeve", "Floor", "Ivory buti", "Front edges and cuffs", "Unlined, worn as a layer", "Is the cover-up", "One saree", "Occasion"]}, {"c": "W17", "img": "w16b", "n": "Gada sharara set", "col": "Soft Butter", "hex": "#F3E2A6", "who": "her", "ty": "set", "occ": ["festive"], "cut": "sv", "t": "For the gaye holud. Soft butter yellow and a flared sharara, made to dance in.", "s": ["Short kurti and sharara", "Round neck", "Three-quarter sleeve", "Hip kurti, floor sharara", "Ivory buti", "Sharara hems and orna", "Fully lined", "Orna included", "One and a half sarees", "Occasion"]}, {"c": "W18", "img": "w17", "n": "Akdh bridal lehenga", "col": "Pearl Ivory", "hex": "#EEE8DA", "who": "her", "ty": "saree", "occ": ["akdh"], "cut": "sv", "t": "For the bride who wants to look like herself. Ivory and gold, with a veil light enough to forget.", "s": ["Lehenga, blouse and veil", "Round neck", "Full sleeve", "Floor", "Gold buti throughout", "Wide gold paar on skirt and veil", "Fully lined", "Veil included", "Three sarees", "Statement"]}, {"c": "W19", "img": "w18b", "n": "Little dove dress", "col": "Dove Grey", "hex": "#BFC3C4", "who": "her", "ty": "dress", "occ": ["everyday", "biye"], "cut": "sl", "t": "Every wardrobe needs one dress that goes with everything. Ours is dove grey, and woven in Rupganj.", "s": ["Shift", "Round neck", "Sleeveless", "Knee", "Ivory buti on grey", "Ivory paar at the hem", "Fully lined", "Grey sheer shrug", "Half a saree", "Core"]}, {"c": "W20", "img": "w19b", "n": "The Dhaka suit", "col": "Ivory and Sage", "hex": "#EDE7D9", "who": "her", "ty": "set", "occ": ["everyday", "festive"], "cut": "sv", "t": "A collarless jacket and skirt, with the paar used as trim. Our answer to the classic two-piece suit.", "s": ["Boxy jacket and straight skirt", "Collarless", "Full sleeve", "Knee skirt", "Sage buti on ivory", "Paar as trim on edges, pockets and cuffs", "Jacket lined, lightly structured", "Jacket is the layer", "One saree", "Statement"]}, {"c": "W21", "img": "w20b", "n": "Lavender kaftan", "col": "Dusty Lavender", "hex": "#CFC2DC", "who": "her", "ty": "gown", "occ": ["festive", "biye"], "cut": "sv", "t": "One size, no fastenings, and it suits everyone. The easiest piece to give as a gift.", "s": ["Kaftan", "V neck", "Wide fluid sleeve", "Ankle", "Ivory buti", "Neckline, sleeve edges and hem", "Inner slip", "Not needed", "One saree", "Occasion"]}, {"c": "W22", "img": "w21b", "n": "Eucalyptus anarkali", "col": "Eucalyptus", "hex": "#B9D2C6", "who": "her", "ty": "gown", "occ": ["biye"], "cut": "sv", "t": "A full anarkali with sleeves, for the guest who wants presence without bare skin.", "s": ["Anarkali", "Round neck", "Full sleeve", "Floor", "Pearl buti", "Wide pearl paar at hem and cuffs", "Fully lined", "Orna included", "Two sarees", "Statement"]}, {"c": "W23", "img": "w22", "n": "Dusty rose skirt set", "col": "Dusty Rose", "hex": "#D9A5A8", "who": "her", "ty": "saree", "occ": ["biye", "akdh"], "cut": "sv", "t": "A light lehenga for the bridesmaid or the cousin. Blouse and skirt also work apart.", "s": ["Crop blouse and flared skirt", "Boat neck", "Short sleeve", "Floor", "Pearl buti", "Wide paar at the skirt hem", "Fully lined", "Sheer orna included", "Two sarees", "Statement"]}, {"c": "W24", "img": "w23", "n": "Pudina office kurti", "col": "Mint", "hex": "#BFE0CF", "who": "her", "ty": "set", "occ": ["everyday"], "cut": "sv", "t": "Monday to Thursday. Full sleeves, a band collar, and it goes with every hijab colour.", "s": ["Straight kurti", "Band collar", "Full sleeve", "Knee", "White buti", "Placket and hem", "Body lined", "Not needed", "Half a saree", "Core"]}, {"c": "W25", "img": "w24b", "n": "Duck-egg blouse", "col": "Duck Egg", "hex": "#BCD3D9", "who": "her", "ty": "saree", "occ": ["biye", "akdh", "festive"], "cut": "sv", "t": "Already own sarees? Start here. One Jamdani blouse makes every plain saree new.", "s": ["Tailored saree blouse", "High neck", "Elbow sleeve", "Waist", "Gold buti", "Sleeve edges", "Fully lined", "Not needed", "A quarter saree", "Entry"]}, {"c": "W26", "img": "x01", "n": "Lilac cape saree", "col": "Pale Lilac", "hex": "#D9CDE3", "who": "her", "ty": "saree", "occ": ["biye", "akdh"], "cut": "sv", "t": "A soft saree with a sheer cape blouse. Quiet enough for an akdh, dressed enough for a reception.", "s": ["Saree with cape blouse", "Round neck", "Sheer cape sleeve", "Floor", "Silver-white buti", "Silver paar, kept whole", "Blouse lined", "Cape blouse included", "One saree, uncut", "Statement"]}, {"c": "W27", "img": "x02", "n": "Teal office suit", "col": "Dusty Teal", "hex": "#7FA6A0", "who": "her", "ty": "set", "occ": ["everyday"], "cut": "sv", "t": "Blazer and wide trousers in all-over buti. For the woman who runs the meeting.", "s": ["Relaxed blazer and wide trousers", "Notch lapel", "Full sleeve", "Full-length trousers", "All-over ivory buti", "None", "Fully lined", "Blazer is the layer", "One and a half sarees", "Statement"]}, {"c": "W28", "img": "x03b", "n": "Denim-blue midi skirt", "col": "Washed Denim", "hex": "#8FB0CC", "who": "her", "ty": "set", "occ": ["everyday", "festive"], "cut": "sv", "t": "One skirt, any white shirt. The paar sits at the hem where it can be seen.", "s": ["A-line midi skirt", "Worn with a shirt", "Skirt only", "Midi", "White buti", "Wide white paar at the hem", "Fully lined", "Not needed", "Half a saree", "Core"]}, {"c": "W29", "img": "x04b", "n": "Peach mehendi set", "col": "Soft Peach", "hex": "#F4C9B0", "who": "her", "ty": "layer", "occ": ["festive"], "cut": "sl", "t": "Top, dhoti trousers and a long Jamdani shrug. Made for the mehendi night dance floor.", "s": ["Long shrug over top and dhoti trousers", "Open front", "Sleeveless shrug", "Calf-length shrug", "Ivory buti", "Down the front edges", "Shrug unlined, set in plain cotton", "Elbow-sleeve top option", "Half a saree", "Occasion"]}, {"c": "W30", "img": "x05", "n": "The Sokhina orna", "col": "Soft Peach", "hex": "#F4C9B0", "who": "her", "ty": "layer", "occ": ["everyday", "festive", "akdh"], "cut": "sv", "t": "One Jamdani orna over the plain three-piece you already own. The easiest way in.", "s": ["Statement orna", "Worn over any kameez", "Draped", "Two and a half metres", "Ivory buti", "Wide paar and tassels at both ends", "Unlined", "Is the layer", "Half a saree, uncut", "Entry"]}, {"c": "W31", "img": "x06", "n": "Dusty blue maxi shirt dress", "col": "Dusty Blue", "hex": "#8FAFC8", "who": "her", "ty": "dress", "occ": ["everyday", "festive"], "cut": "sv", "t": "Full sleeves, full length, belted. A modest dress that is still clearly fashion.", "s": ["Maxi shirt dress, belted", "Shirt collar", "Full sleeve", "Ankle", "All-over white buti", "Hem and cuffs", "Fully lined", "Not needed", "One and a half sarees", "Occasion"]}, {"c": "W32", "img": "x07b", "n": "Golapi bridal saree", "col": "Bridal Rose", "hex": "#D99AA5", "who": "her", "ty": "saree", "occ": ["biye"], "cut": "sv", "t": "A bridal saree in soft rose and gold, for the bride who wants calm over drama. Sold whole, with a blouse made to measure.", "s": ["Uncut bridal saree", "Round neck blouse", "Elbow-sleeve blouse", "Floor", "Sparse gold buti", "Wide gold paar, kept whole", "Blouse lined", "Blouse included", "One fine saree, uncut", "Statement"]}, {"c": "W33", "img": "x08", "n": "Ekushey saree", "col": "White and Black", "hex": "#2B2B2E", "who": "her", "ty": "saree", "occ": ["festive"], "cut": "sv", "t": "White with a black paar, for the morning of 21 February.", "s": ["Uncut saree, black blouse", "Round neck blouse", "Elbow-sleeve blouse", "Floor", "Black buti on white", "Wide black paar, kept whole", "Blouse lined", "Blouse included", "One saree, uncut", "Occasion"]}, {"c": "W34", "img": "s01", "n": "Jamdani trench", "col": "Pale Sage", "hex": "#CBD5C0", "who": "her", "ty": "show", "occ": ["everyday", "festive", "biye"], "cut": "sv", "t": "The coat nobody expects in Jamdani. Sheer, belted, and worn over anything plain.", "s": ["Belted trench coat", "Wide lapel", "Full sleeve", "Calf", "Sparse ivory buti", "Hem and cuffs", "Unlined, worn as a layer", "Is the layer", "Two sarees", "Statement"]}, {"c": "W35", "img": "s02", "n": "Anchal cape gown", "col": "Pearl Ivory", "hex": "#EEE8DA", "who": "her", "ty": "show", "occ": ["biye", "akdh"], "cut": "sl", "t": "A plain column gown under a floor-length Jamdani cape. The anchal, turned into a train.", "s": ["Column gown with floor cape", "High round neck", "Sleeveless under the cape", "Floor", "Sparse gold buti on the cape", "Wide gold paar at the cape hem", "Gown is the lining", "Cape included", "One fine saree", "Statement"]}, {"c": "W36", "img": "s05", "n": "Kone robe", "col": "Petal Blush", "hex": "#EFC9C6", "who": "her", "ty": "show", "occ": ["akdh", "biye"], "cut": "sv", "t": "For the morning of the wedding. The robe every bride is photographed in before she is dressed.", "s": ["Wrap robe", "Shawl wrap", "Wide kimono sleeve", "Ankle", "Sparse ivory buti", "Front edges and sleeve ends", "Fully lined", "Not needed", "One and a half sarees", "Occasion"]}, {"c": "W37", "img": "s06", "n": "Pocket saree", "col": "Powder Blue", "hex": "#B8CFE3", "who": "her", "ty": "show", "occ": ["everyday", "festive"], "cut": "sl", "t": "A pre-stitched saree with pockets and a belt. Two minutes to put on, and somewhere to keep your phone.", "s": ["Pre-stitched saree, belted", "Round neck crop blouse", "Sleeveless blouse", "Floor", "Sparse white buti", "White paar, kept whole", "Skirt part lined", "Elbow-sleeve blouse option", "One saree, almost uncut", "Occasion"]}, {"c": "W38", "img": "p01", "n": "Halter blouse", "col": "Pale Sage", "hex": "#CBD5C0", "who": "her", "ty": "blouse", "occ": ["biye", "akdh", "festive"], "cut": "sl", "t": "A halter neck in Jamdani turns a plain saree into an evening look.", "s": ["Saree blouse", "Halter", "Sleeveless", "Waist", "Sparse ivory buti", "At the neckline", "Fully lined, padded option", "Matching sheer shrug", "A quarter saree", "Entry"]}, {"c": "W39", "img": "p02", "n": "Tie-back blouse", "col": "Petal Blush", "hex": "#EFC9C6", "who": "her", "ty": "blouse", "occ": ["biye", "akdh", "festive"], "cut": "sl", "t": "Simple from the front. A keyhole and a tasselled tie at the back.", "s": ["Saree blouse", "Round neck, keyhole back", "Sleeveless", "Waist", "Sparse ivory buti", "None", "Fully lined", "Matching sheer shrug", "A quarter saree", "Entry"]}, {"c": "W40", "img": "p03", "n": "High-neck crop blouse", "col": "Buttercream", "hex": "#EBDDA4", "who": "her", "ty": "blouse", "occ": ["festive", "akdh"], "cut": "sl", "t": "A longline crop that works with a saree, a lehenga skirt or high-waisted trousers.", "s": ["Longline crop blouse", "High neck", "Sleeveless", "Above the waist", "Sparse cream buti", "None", "Fully lined", "Matching sheer shrug", "A quarter saree", "Entry"]}, {"c": "W41", "img": "p04", "n": "Peplum blouse", "col": "Pale Lilac", "hex": "#D9CDE3", "who": "her", "ty": "blouse", "occ": ["biye", "festive"], "cut": "sl", "t": "Square neck, wide straps and a short peplum that covers the waist.", "s": ["Peplum saree blouse", "Square neck", "Sleeveless, wide straps", "Hip", "Sparse white buti", "Along the peplum edge", "Fully lined", "Matching sheer shrug", "A third of a saree", "Core"]}, {"c": "W42", "img": "p05", "n": "Sea-glass shell top", "col": "Pale Sea Glass", "hex": "#BCD8D2", "who": "her", "ty": "top", "occ": ["everyday"], "cut": "sl", "t": "The simplest thing we make. A sleeveless shell for trousers, jeans or under a blazer.", "s": ["Shell top", "Round neck", "Sleeveless", "Hip, side slits", "Sparse ivory buti", "None", "Fully lined", "Blazer or shrug", "A quarter saree", "Entry"]}, {"c": "W43", "img": "p06", "n": "Peach tie-front shirt", "col": "Peach Milk", "hex": "#F2C4A8", "who": "her", "ty": "top", "occ": ["everyday"], "cut": "sv", "t": "A soft shirt that knots at the waist. Easy, young, and good with white.", "s": ["Tie-front shirt", "Soft collar", "Elbow sleeve", "Waist", "Sparse ivory buti", "None", "Unlined, denser weave", "Not needed", "A third of a saree", "Core"]}, {"c": "W44", "img": "p07", "n": "Golap Patiala salwar", "col": "Dusty Rose", "hex": "#D9A5A8", "who": "her", "ty": "bottom", "occ": ["everyday", "festive"], "cut": "sv", "t": "A full Patiala in Jamdani, so the kameez on top can stay plain.", "s": ["Patiala salwar", "Worn with a kameez", "Salwar only", "Ankle", "Sparse ivory buti", "At the ankle cuffs", "Dense weave, cotton-backed", "Not needed", "One saree", "Core"]}, {"c": "W45", "img": "p08", "n": "Sage straight salwar", "col": "Pale Sage", "hex": "#CBD5C0", "who": "her", "ty": "bottom", "occ": ["everyday", "akdh"], "cut": "sv", "t": "Slim and straight, with the paar at the ankle where it shows when you walk.", "s": ["Straight cigarette salwar", "Worn with a kameez", "Salwar only", "Ankle", "Sparse ivory buti", "Wide paar at the ankles", "Dense weave, cotton-backed", "Not needed", "Half a saree", "Core"]}, {"c": "W46", "img": "p09", "n": "Powder dhoti salwar", "col": "Powder Blue", "hex": "#B8CFE3", "who": "her", "ty": "bottom", "occ": ["festive", "everyday"], "cut": "sv", "t": "Soft folds at the front, narrow at the ankle. For the mehendi night and for Fridays.", "s": ["Dhoti salwar", "Worn with a top", "Salwar only", "Ankle", "Sparse white buti", "None", "Dense weave, cotton-backed", "Not needed", "One saree", "Core"]}, {"c": "W47", "img": "p10", "n": "Lilac culottes", "col": "Soft Lilac", "hex": "#D4C1E0", "who": "her", "ty": "bottom", "occ": ["everyday"], "cut": "sv", "t": "Wide, pleated and cut at the calf. They read as a skirt and move like trousers.", "s": ["Pleated culottes", "Worn with a shirt", "Trousers only", "Calf", "Sparse white buti", "At the hem", "Dense weave, cotton-backed", "Not needed", "Half a saree", "Core"]}, {"c": "W48", "img": "e01", "n": "Sage pinafore", "col": "Pale Sage", "hex": "#CBD5C0", "who": "her", "ty": "dress", "occ": ["everyday"], "cut": "sl", "t": "A pinafore over a white tee. The youngest thing in the collection, for campus and weekends.", "s": ["Pinafore dress", "Square bib", "Sleeveless, worn over a tee", "Knee", "Sparse ivory buti", "None", "Fully lined", "Long-sleeve tee underneath", "Half a saree", "Core"]}, {"c": "W49", "img": "e02", "n": "Oat waistcoat set", "col": "Warm Oat", "hex": "#DCCDB2", "who": "her", "ty": "set", "occ": ["everyday", "festive"], "cut": "sl", "t": "A tailored waistcoat worn alone, with matching wide trousers. Sharp without a jacket.", "s": ["Waistcoat and wide trousers", "V neck", "Sleeveless", "Full-length trousers", "Sparse ivory buti", "None", "Fully lined", "Matching blazer option", "One and a half sarees", "Occasion"]}, {"c": "W50", "img": "e03", "n": "Shell balloon-sleeve blouse", "col": "Shell Pink", "hex": "#EBD5D0", "who": "her", "ty": "top", "occ": ["everyday", "festive"], "cut": "sv", "t": "Sheer balloon sleeves show what Jamdani does best: it lets the light through.", "s": ["Blouse", "Round neck", "Full sheer balloon sleeve", "Hip, tucked", "Sparse ivory buti", "None", "Body lined, sleeves sheer", "Not needed", "Half a saree", "Core"]}, {"c": "W51", "img": "e04", "n": "Powder angarkha top", "col": "Powder Blue", "hex": "#B8CFE3", "who": "her", "ty": "top", "occ": ["everyday", "festive"], "cut": "sv", "t": "A short angarkha that wraps and ties at the side, over wide white trousers.", "s": ["Short angarkha wrap top", "V crossover", "Elbow sleeve", "Hip", "Sparse white buti", "Along the crossover", "Fully lined", "Not needed", "Half a saree", "Core"]}, {"c": "W52", "img": "e05", "n": "Lilac pocket kurta", "col": "Lilac Grey", "hex": "#CFC6D6", "who": "her", "ty": "set", "occ": ["everyday"], "cut": "sv", "t": "A long straight kurta with real pockets. The one she will wear twice a week.", "s": ["Long straight kurta", "Band collar, hidden placket", "Full sleeve", "Calf", "Sparse white buti", "At the hem", "Fully lined", "Not needed", "One saree", "Core"]}, {"c": "W53", "img": "e06", "n": "Maa dress", "col": "Peach Milk", "hex": "#F2C4A8", "who": "her", "ty": "dress", "occ": ["everyday", "festive", "akdh"], "cut": "sv", "t": "An empire-line dress with room to grow, for the months before the baby and long after.", "s": ["Empire-waist maternity dress", "Soft V neck", "Elbow sleeve", "Ankle", "Sparse ivory buti", "At the hem", "Fully lined in soft cotton", "Not needed", "One and a half sarees", "Occasion"]}, {"c": "W54", "img": "e07", "n": "Jamdani scarf", "col": "Pale Sage", "hex": "#CBD5C0", "who": "her", "ty": "layer", "occ": ["everyday", "festive", "akdh"], "cut": "sv", "t": "Fine enough to wear as a hijab, wide enough to wear as an orna.", "s": ["Scarf, worn as hijab or orna", "Worn over any dress", "Draped", "Two metres", "Sparse ivory buti", "Narrow paar along the edge", "Unlined, fine muslin", "Is the cover", "A third of a saree", "Entry"]}, {"c": "W55", "img": "e08", "n": "Golap quilted jacket", "col": "Dusty Rose", "hex": "#DDB8B5", "who": "her", "ty": "layer", "occ": ["everyday", "biye"], "cut": "sv", "t": "Wedding season is cold. A light quilted jacket to wear over a kameez or a saree.", "s": ["Quilted collarless jacket", "Collarless", "Full sleeve", "Hip", "Sparse ivory buti", "None", "Quilted with cotton wadding", "Is the layer", "One saree", "Occasion"]}, {"c": "W56", "img": "e09", "n": "Shirt saree", "col": "Buttercream", "hex": "#EBDDA4", "who": "her", "ty": "saree", "occ": ["everyday", "festive"], "cut": "sv", "t": "A saree over a white shirt, with a belt. No blouse to stitch, and it looks like you meant it.", "s": ["Saree over a shirt, belted", "Shirt collar", "Rolled shirt sleeve", "Floor", "Sparse ivory buti", "Ivory paar, kept whole", "Not needed over a shirt", "Shirt is the cover", "One saree, uncut", "Occasion"]}, {"c": "M01", "img": "m01", "n": "Sage butidar koti", "col": "Sage", "hex": "#C5D3BE", "who": "him", "ty": "koti", "occ": ["everyday", "akdh", "biye"], "cut": "sv", "t": "Our signature. Put it over any plain panjabi and the outfit is finished.", "s": ["Koti", "Band collar", "Layer over a panjabi", "Hip", "Ivory buti", "None, all-over motif", "Fully lined", "White or ivory panjabi", "A quarter saree", "Entry"]}, {"c": "M02", "img": "m03", "n": "Ivory akdh panjabi", "col": "Pearl Ivory", "hex": "#EEE8DA", "who": "him", "ty": "panjabi", "occ": ["akdh", "festive"], "cut": "sv", "t": "Gold on ivory, for the groom and the men standing beside him.", "s": ["Panjabi", "Band collar", "Full sleeve", "Knee", "Gold buti", "Placket and cuffs", "Cotton underlayer", "White pajama", "Half a saree", "Core"]}, {"c": "M03", "img": "m04", "n": "Sky everyday shirt", "col": "Sky Blue", "hex": "#A9CBE3", "who": "him", "ty": "shirt", "occ": ["everyday"], "cut": "sv", "t": "Jamdani for a Tuesday. Wear it with chinos or jeans.", "s": ["Casual shirt", "Band collar", "Short sleeve", "Hip", "White buti", "None", "Unlined, denser weave", "Chinos or jeans", "A third of a saree", "Core"]}, {"c": "M04", "img": "n01b", "n": "Slate panjabi", "col": "Pale Slate", "hex": "#A7B1BA", "who": "him", "ty": "panjabi", "occ": ["biye", "festive"], "cut": "sv", "t": "Soft slate with white buti. The evening panjabi, and the one for Ekushey with a white shawl.", "s": ["Panjabi", "Band collar", "Full sleeve", "Knee", "White buti on slate", "White paar on the placket", "Cotton underlayer", "White pajama", "Half a saree", "Core"]}, {"c": "M05", "img": "n02", "n": "Laal-shada panjabi", "col": "White and Red", "hex": "#D9453B", "who": "him", "ty": "panjabi", "occ": ["festive"], "cut": "sv", "t": "Red on white for Pohela Boishakh. Pairs with the laal-shada saree for her.", "s": ["Panjabi", "Band collar", "Full sleeve", "Knee", "Red buti on white", "Red paar on placket and cuffs", "Cotton underlayer", "White pajama", "Half a saree", "Core"]}, {"c": "M06", "img": "n03", "n": "Akdh sherwani", "col": "Pearl Ivory", "hex": "#EEE8DA", "who": "him", "ty": "wed", "occ": ["akdh", "biye"], "cut": "sv", "t": "For the groom. Ivory and gold, with a Jamdani stole that matches the bridal lehenga.", "s": ["Sherwani", "Band collar", "Full sleeve", "Knee", "Gold buti", "On the stole ends", "Fully lined and structured", "Churidar and stole included", "Two sarees", "Statement"]}, {"c": "M07", "img": "n04b", "n": "Dusty blue prince coat", "col": "Dusty Blue", "hex": "#A9BDD0", "who": "him", "ty": "wed", "occ": ["biye"], "cut": "sv", "t": "A bandhgala cut in pale blue Jamdani. The sharpest man at the reception.", "s": ["Prince coat", "Stand collar", "Full sleeve", "Hip", "Ivory buti", "None", "Fully lined and structured", "Ivory trousers", "One saree", "Statement"]}, {"c": "M08", "img": "n05b", "n": "Denim-blue jhalar koti", "col": "Washed Denim", "hex": "#8FB0CC", "who": "him", "ty": "koti", "occ": ["biye", "festive"], "cut": "sv", "t": "Pale blue over ivory. The evening version of our signature.", "s": ["Koti", "Band collar", "Layer over a panjabi", "Hip", "White jhalar", "None, all-over motif", "Fully lined", "Ivory panjabi", "A quarter saree", "Entry"]}, {"c": "M09", "img": "n06b", "n": "Rose clay koti", "col": "Rose Clay", "hex": "#D8B4AE", "who": "him", "ty": "koti", "occ": ["biye", "akdh"], "cut": "sv", "t": "The wedding-season koti. Pairs with the long rose koti for her.", "s": ["Koti", "Band collar", "Layer over a panjabi", "Hip", "Ivory buti", "None, all-over motif", "Fully lined", "Ivory panjabi", "A quarter saree", "Entry"]}, {"c": "M10", "img": "n07b", "n": "Olive mist fatua", "col": "Olive Mist", "hex": "#B9C2AE", "who": "him", "ty": "shirt", "occ": ["everyday"], "cut": "sv", "t": "Short, easy and made for chinos or jeans. The first Jamdani a twenty-year-old will actually wear.", "s": ["Fatua", "Band collar", "Three-quarter sleeve", "Hip", "Ivory buti", "None", "Unlined, denser weave", "Chinos or jeans", "A third of a saree", "Entry"]}, {"c": "M11", "img": "n08", "n": "White office shirt", "col": "White on White", "hex": "#F2F0EA", "who": "him", "ty": "shirt", "occ": ["everyday"], "cut": "sv", "t": "Tone on tone, so it passes any dress code. You see the buti only up close.", "s": ["Formal shirt", "Classic collar", "Full sleeve", "Hip, tucked", "White buti on white", "None", "Unlined, denser weave", "Tailored trousers", "Half a saree", "Core"]}, {"c": "M12", "img": "n09", "n": "Sand holiday shirt", "col": "Warm Sand", "hex": "#E2D3B5", "who": "him", "ty": "shirt", "occ": ["everyday", "festive"], "cut": "sv", "t": "Open collar, worn loose. For weekends and the beach.", "s": ["Camp-collar shirt", "Open collar", "Short sleeve", "Hip", "Ivory buti", "None", "Unlined", "Linen trousers", "A third of a saree", "Core"]}, {"c": "M13", "img": "n10", "n": "Dove soft blazer", "col": "Dove Grey", "hex": "#B9B9B4", "who": "him", "ty": "koti", "occ": ["everyday", "biye"], "cut": "sv", "t": "An unstructured blazer in Jamdani. Over a T-shirt for dinner, over a shirt for a meeting.", "s": ["Unstructured blazer", "Notch lapel", "Full sleeve", "Hip", "White buti", "None", "Half lined", "T-shirt or shirt", "One saree", "Occasion"]}, {"c": "M14", "img": "n11b", "n": "Winter wedding shawl", "col": "Warm Oat", "hex": "#DCCDB2", "who": "him", "ty": "koti", "occ": ["biye", "akdh"], "cut": "sv", "t": "Wedding season is winter. A Jamdani shawl over a plain panjabi, for fathers and uncles.", "s": ["Shawl", "None", "Draped", "Two and a half metres", "Ivory buti", "Wide paar at both ends, kept whole", "Unlined", "Any plain panjabi", "Half a saree, uncut", "Core"]}, {"c": "M15", "img": "n12", "n": "Stone kabli set", "col": "Stone Grey", "hex": "#8E908C", "who": "him", "ty": "panjabi", "occ": ["festive", "everyday"], "cut": "sv", "t": "The kabli set men already buy for Eid, in a quiet Jamdani.", "s": ["Kabli kurta and trousers", "Shirt collar", "Full sleeve", "Knee", "Sparse white buti", "None", "Unlined, denser weave", "Matching trousers included", "One saree", "Occasion"]}, {"c": "M16", "img": "n13b", "n": "Holud panjabi", "col": "Soft Butter", "hex": "#F3E2A6", "who": "him", "ty": "panjabi", "occ": ["festive"], "cut": "sv", "t": "For the holud. Matches the gada sharara set for her.", "s": ["Panjabi", "Band collar", "Full sleeve", "Knee", "Ivory buti", "Ivory paar on the placket", "Cotton underlayer", "White pajama", "Half a saree", "Core"]}, {"c": "M17", "img": "y01b", "n": "Olive mist bomber", "col": "Olive Mist", "hex": "#B9C2AE", "who": "him", "ty": "koti", "occ": ["everyday"], "cut": "sv", "t": "A bomber jacket in Jamdani. For winter evenings, and for men who would never wear a panjabi to dinner.", "s": ["Bomber jacket", "Ribbed collar", "Full sleeve", "Waist", "Ivory buti", "None", "Fully lined", "T-shirt and off-white trousers", "One saree", "Occasion"]}, {"c": "M18", "img": "y02", "n": "Pudina half-sleeve panjabi", "col": "Pale Mint", "hex": "#CFE6D8", "who": "him", "ty": "panjabi", "occ": ["festive", "everyday"], "cut": "sv", "t": "Short sleeves for a summer Eid. Light enough for the afternoon heat.", "s": ["Panjabi", "Band collar", "Half sleeve", "Knee", "White buti", "None", "Unlined, airy weave", "White pajama", "Half a saree", "Core"]}, {"c": "M19", "img": "y03b", "n": "Ekushey koti", "col": "Ash Grey", "hex": "#B4B8BA", "who": "him", "ty": "koti", "occ": ["festive"], "cut": "sv", "t": "Ash grey koti over white. Pairs with the Ekushey saree for her.", "s": ["Koti", "Band collar", "Layer over a panjabi", "Hip", "White buti on grey", "None, all-over motif", "Fully lined", "White panjabi", "A quarter saree", "Entry"]}, {"c": "M20", "img": "y04b", "n": "Champagne reception sherwani", "col": "Champagne Rose", "hex": "#E6CFC6", "who": "him", "ty": "wed", "occ": ["biye"], "cut": "sv", "t": "For the reception. Pairs with the golapi bridal saree.", "s": ["Sherwani", "Band collar", "Full sleeve", "Knee", "Gold buti", "On the stole", "Fully lined and structured", "Churidar and stole included", "Two sarees", "Statement"]}, {"c": "M21", "img": "y05", "n": "Puja panjabi", "col": "Cream and Red", "hex": "#E9D9C2", "who": "him", "ty": "panjabi", "occ": ["festive"], "cut": "sv", "t": "Red on cream for Durga Puja, worn with a dhuti or a pajama.", "s": ["Panjabi", "Band collar", "Full sleeve", "Knee", "Red buti on cream", "Placket", "Cotton underlayer", "Dhuti or pajama", "Half a saree", "Core"]}, {"c": "M22", "img": "y06b", "n": "Denim-blue overshirt", "col": "Washed Denim", "hex": "#8FB0CC", "who": "him", "ty": "shirt", "occ": ["everyday"], "cut": "sv", "t": "Worn open like a light jacket. The weekend piece.", "s": ["Overshirt", "Shirt collar", "Full sleeve", "Hip", "White buti", "None", "Unlined, denser weave", "T-shirt and chinos", "Half a saree", "Core"]}, {"c": "M23", "img": "z01", "n": "Sage resort set", "col": "Pale Sage", "hex": "#CBD5C0", "who": "him", "ty": "shirt", "occ": ["everyday", "festive"], "cut": "sv", "t": "Shirt and trousers cut from the same cloth. One decision, and you are dressed.", "s": ["Camp-collar shirt and matching trousers", "Open collar", "Short sleeve", "Full-length trousers", "Sparse ivory buti", "None", "Shirt unlined, trousers backed", "White T-shirt", "One and a half sarees", "Occasion"]}, {"c": "M24", "img": "z02", "n": "Oat wrap jacket", "col": "Warm Oat", "hex": "#DCCDB2", "who": "him", "ty": "koti", "occ": ["everyday", "festive"], "cut": "sv", "t": "A soft jacket that wraps and ties at the side. The old angarkha, cut short for now.", "s": ["Wrap jacket", "Crossover", "Three-quarter sleeve", "Hip", "Sparse ivory buti", "Along the wrap edge", "Unlined", "T-shirt and wide trousers", "Half a saree", "Core"]}, {"c": "M25", "img": "z03", "n": "Powder pleated trousers", "col": "Powder Blue", "hex": "#B8CFE3", "who": "him", "ty": "bottom", "occ": ["everyday", "festive"], "cut": "sv", "t": "Jamdani below the waist. Wide, pleated, and worn with the plainest shirt you own.", "s": ["Wide pleated trousers", "Worn with a shirt", "Trousers only", "Full length", "Sparse white buti", "None", "Seat and knee backed", "Plain white shirt", "One saree", "Core"]}, {"c": "M26", "img": "z04", "n": "Stone long vest", "col": "Stone Grey", "hex": "#B9B6AE", "who": "him", "ty": "koti", "occ": ["biye", "akdh", "festive"], "cut": "sv", "t": "A knee-length open vest over a tonal kurta. The longest, leanest line we cut.", "s": ["Long open vest", "Collarless", "Layer over a kurta", "Knee", "Sparse white buti", "Down the front edges", "Fully lined", "Tonal kurta and trousers", "Half a saree", "Occasion"]}, {"c": "M27", "img": "z05", "n": "Apricot side-button panjabi", "col": "Pale Apricot", "hex": "#F1CDB0", "who": "him", "ty": "panjabi", "occ": ["festive", "akdh"], "cut": "sv", "t": "Buttons run down the side and the Jamdani sits on one panel. Asymmetric, and still easy to wear.", "s": ["Side-button panjabi", "Band collar", "Full sleeve", "Knee", "Sparse ivory buti on one panel", "None", "Cotton underlayer", "Ivory trousers", "A third of a saree", "Core"]}, {"c": "M28", "img": "z06", "n": "Butter oversized shirt", "col": "Buttercream", "hex": "#EBDDA4", "who": "him", "ty": "shirt", "occ": ["everyday"], "cut": "sv", "t": "Drop shoulders, band collar, worn loose. The one the younger brother will borrow.", "s": ["Oversized shirt", "Band collar", "Full sleeve, pushed up", "Hip", "Sparse cream buti", "None", "Unlined", "Wide cream trousers", "Half a saree", "Core"]}, {"c": "M29", "img": "z07", "n": "Mushroom shawl-collar jacket", "col": "Mushroom", "hex": "#C4B5A2", "who": "him", "ty": "koti", "occ": ["everyday", "festive"], "cut": "sv", "t": "No buttons, no lining, just a soft collar that rolls. Wear it like a cardigan.", "s": ["Shawl-collar jacket", "Shawl collar", "Full sleeve", "Hip", "Sparse ivory buti", "None", "Unlined", "Fine knit tee and tapered trousers", "One saree", "Occasion"]}, {"c": "M30", "img": "z08", "n": "Powder boxy shirt", "col": "Powder Sky", "hex": "#BFD6EA", "who": "him", "ty": "shirt", "occ": ["everyday"], "cut": "sv", "t": "Short, square and tucked into high pleated trousers. Clean enough for the office.", "s": ["Boxy short shirt", "Classic collar", "Short sleeve", "Waist, tucked", "Sparse white buti", "None", "Unlined, denser weave", "Pleated cream trousers", "A third of a saree", "Core"]}, {"c": "M31", "img": "z09", "n": "Shada tonal panjabi", "col": "White on White", "hex": "#F2F0EA", "who": "him", "ty": "panjabi", "occ": ["festive", "akdh", "biye"], "cut": "sv", "t": "All white, with a hidden placket and a hem that falls at an angle. The quietest piece in the room.", "s": ["Long panjabi, asymmetric hem", "Band collar", "Full sleeve", "Below the knee", "White buti on white", "None", "Cotton underlayer", "Slim white trousers", "Half a saree", "Occasion"]}, {"c": "M32", "img": "s03", "n": "Sage Jamdani suit", "col": "Pale Sage", "hex": "#CBD5C0", "who": "him", "ty": "show", "occ": ["biye", "akdh"], "cut": "sv", "t": "A full two-piece suit in Jamdani, for the man who wants to be the best-dressed guest without a sherwani.", "s": ["Two-piece suit", "Notch lapel", "Full sleeve", "Full-length trousers", "Sparse ivory buti, all over", "None", "Fully lined and structured", "White band-collar shirt", "Two sarees", "Statement"]}, {"c": "M33", "img": "s04", "n": "Denim and Jamdani jacket", "col": "Light Denim", "hex": "#9DB9D3", "who": "him", "ty": "show", "occ": ["everyday"], "cut": "sv", "t": "A denim jacket with a Jamdani back. People will stop you to ask where it is from.", "s": ["Denim jacket, Jamdani back panel", "Shirt collar", "Full sleeve", "Waist", "Indigo buti on ivory", "Across the back yoke", "Panel backed with cotton", "White T-shirt", "A quarter saree", "Occasion"]}, {"c": "M34", "img": "q01", "n": "Sage paar pajama", "col": "Pale Sage", "hex": "#CBD5C0", "who": "him", "ty": "bottom", "occ": ["festive", "everyday", "akdh"], "cut": "sv", "t": "A straight pajama with the paar at the ankle. Wear it under the plainest white panjabi.", "s": ["Straight pajama", "Worn with a panjabi", "Pajama only", "Ankle", "Sparse ivory buti", "Wide paar at the ankles", "Dense weave, seat backed", "Plain white panjabi", "Half a saree", "Core"]}, {"c": "M35", "img": "q02", "n": "Balu wide pajama", "col": "Warm Sand", "hex": "#E2D3B5", "who": "him", "ty": "bottom", "occ": ["everyday", "festive"], "cut": "sv", "t": "The old Aligarh pajama, very wide and very comfortable, back in fashion.", "s": ["Wide Aligarh pajama", "Worn with a short kurta", "Pajama only", "Ankle", "Sparse ivory buti", "None", "Dense weave, seat backed", "Short ivory kurta", "One saree", "Core"]}, {"c": "M36", "img": "q03", "n": "Lavender cuffed pajama", "col": "Washed Lavender", "hex": "#C9C3DE", "who": "him", "ty": "bottom", "occ": ["everyday"], "cut": "sv", "t": "Drawstring waist, cuffed ankle. A pajama that passes for joggers.", "s": ["Cuffed drawstring pajama", "Worn with a T-shirt", "Pajama only", "Ankle", "Sparse white buti", "None", "Dense weave, seat backed", "White T-shirt and sneakers", "Half a saree", "Core"]}, {"c": "M37", "img": "q04", "n": "Eid morning pajama set", "col": "Powder Blue", "hex": "#B8CFE3", "who": "him", "ty": "shirt", "occ": ["everyday", "festive"], "cut": "sv", "t": "A matching shirt and pajama for the house. Nice enough to open the door in.", "s": ["Lounge shirt and pajama", "Notched collar, piped", "Full sleeve", "Full-length pajama", "Sparse white buti", "None", "Unlined, soft weave", "Leather slippers", "One and a half sarees", "Occasion"]}, {"c": "M38", "img": "q05", "n": "Peach holiday set", "col": "Peach Milk", "hex": "#F2C4A8", "who": "him", "ty": "shirt", "occ": ["everyday"], "cut": "sv", "t": "Camp shirt and matching shorts, for the beach and for holidays.", "s": ["Camp-collar shirt and shorts", "Open collar", "Short sleeve", "Knee-length shorts", "Sparse ivory buti", "None", "Shirt unlined, shorts backed", "Leather sandals", "One saree", "Core"]}, {"c": "M39", "img": "q06", "n": "Pudina polo", "col": "Pale Mint", "hex": "#CFE6D8", "who": "him", "ty": "shirt", "occ": ["everyday"], "cut": "sv", "t": "A polo with a knitted collar and a Jamdani body, for the man who lives in polos.", "s": ["Polo shirt", "Knitted collar", "Short sleeve", "Hip", "Sparse ivory buti", "None", "Unlined, denser weave", "Pleated trousers", "A third of a saree", "Core"]}, {"c": "M40", "img": "g01", "n": "Dusty blue koti set", "col": "Dusty Blue", "hex": "#A9BDD0", "who": "him", "ty": "koti", "occ": ["festive", "biye", "akdh"], "cut": "sv", "t": "Koti and trousers cut from the same cloth, over a white shirt. A suit for men who do not wear suits.", "s": ["Koti and matching trousers", "Band collar", "Layer over a shirt", "Full-length trousers", "Sparse ivory buti, all over", "None", "Fully lined", "White band-collar shirt", "One and a half sarees", "Occasion"]}, {"c": "M41", "img": "g02", "n": "Balu utility shirt", "col": "Warm Sand", "hex": "#E2D3B5", "who": "him", "ty": "shirt", "occ": ["everyday"], "cut": "sv", "t": "Four pockets, band collar, worn open like a light jacket.", "s": ["Utility shirt", "Band collar", "Short sleeve", "Hip", "Sparse ivory buti", "None", "Unlined, denser weave", "White T-shirt and relaxed trousers", "Half a saree", "Core"]}, {"c": "M42", "img": "g03", "n": "Sage quilted gilet", "col": "Pale Sage", "hex": "#CBD5C0", "who": "him", "ty": "koti", "occ": ["everyday"], "cut": "sv", "t": "A quilted vest for December mornings. The koti, made warm.", "s": ["Quilted gilet", "Stand collar", "Sleeveless layer", "Hip", "Sparse ivory buti", "None", "Quilted with cotton wadding", "Fine knit sweater", "Half a saree", "Occasion"]}, {"c": "M43", "img": "g04", "n": "Eid namaz set", "col": "White and Sage", "hex": "#DCE8E2", "who": "him", "ty": "panjabi", "occ": ["festive", "akdh"], "cut": "sv", "t": "A plain white panjabi with a Jamdani placket, and a tupi woven to match.", "s": ["Panjabi with matching tupi", "Band collar", "Full sleeve", "Knee", "Ivory buti on the tupi", "Sage paar on placket and cuffs", "Unlined", "White pajama", "A quarter saree", "Core"]}, {"c": "M44", "img": "g05", "n": "Friday lungi", "col": "Powder Blue", "hex": "#B8CFE3", "who": "him", "ty": "bottom", "occ": ["everyday"], "cut": "sv", "t": "The lungi, in Jamdani, with the paar at the hem. The most Bangladeshi thing we make.", "s": ["Lungi", "Worn with a shirt or tee", "Lungi only", "Ankle", "Sparse white buti", "Wide white paar at the hem", "Dense weave", "Plain white shirt", "Half a saree", "Core"]}, {"c": "M45", "img": "g06", "n": "Apricot dhoti trousers", "col": "Pale Apricot", "hex": "#F1CDB0", "who": "him", "ty": "bottom", "occ": ["festive", "akdh"], "cut": "sv", "t": "Pre-stitched dhoti trousers that drape without any tying. For the holud and for Puja.", "s": ["Dhoti trousers", "Worn with a short kurta", "Trousers only", "Ankle", "Sparse ivory buti", "None", "Dense weave, seat backed", "Short ivory kurta", "One saree", "Core"]}, {"c": "M46", "img": "g07", "n": "Jamdani tie and pocket square", "col": "Pale Sage", "hex": "#CBD5C0", "who": "him", "ty": "wed", "occ": ["biye", "akdh"], "cut": "sv", "t": "For the man in a suit. The smallest way to wear Jamdani to a wedding.", "s": ["Tie and pocket square", "Worn with a suit", "Accessory", "Standard tie length", "Ivory buti", "None", "Interlined", "Ivory or navy suit", "An offcut", "Entry"]}];
+  var FILTERS = {
+    her:[['occ','Occasion',[['all','All'],['everyday','Everyday'],['festive','Festive day'],['akdh','Akdh'],['biye','Biye bari']]],
+         ['ty','Type',[['all','All'],['dress','Dresses'],['gown','Gowns and kaftans'],['set','Sets and suits'],['saree','Saree and lehenga'],['layer','Layers'],['blouse','Blouses'],['top','Tops'],['bottom','Salwars and trousers'],['show','Showpieces']]],
+         ['cut','Cut',[['all','All'],['sl','Sleeveless'],['sv','Sleeves or layer']]]],
+    him:[['occ','Occasion',[['all','All'],['everyday','Everyday'],['festive','Festive day'],['akdh','Akdh'],['biye','Biye bari']]],
+         ['ty','Type',[['all','All'],['panjabi','Panjabi and kabli'],['koti','Koti, jackets, layers'],['shirt','Shirts, sets, trousers'],['wed','Wedding wear'],['bottom','Pajamas and trousers'],['show','Showpieces']]]]
+  };
+  function gallery(host, mode, who){
+    var keep = mode === 'pitch' ? [0,1,2,3,4,5,6,7,8,9] : [0,3,6,7];
+    var list = LOOKS.filter(function(L){ return L.who === who; });
+    var st = {occ:'all', ty:'all', cut:'all'};
+    var h = '<div class="filters">' + FILTERS[who].map(function(f){
+      return '<div class="fgroup"><span>'+f[1]+'</span>' + f[2].map(function(o){
+        return '<button type="button" class="chip" data-k="'+f[0]+'" data-v="'+o[0]+'" aria-pressed="'+(o[0]==='all')+'">'+o[1]+'</button>';
+      }).join('') + '</div>';
+    }).join('') + '<div class="count" aria-live="polite"></div></div><div class="gal" style="margin-top:18px">' + list.map(function(L, i){
+      return '<article class="lk" data-i="'+i+'"><img loading="lazy" src="img/'+L.img+'.jpg" alt="'+L.n+' in '+L.col+'">' +
+        '<div class="b"><div class="code"><i class="dot" style="background:'+L.hex+'"></i>'+L.c+' · '+L.col+'</div><h3>'+L.n+'</h3><p>'+L.t+'</p>' +
+        '<div class="tags">' + L.occ.map(function(o){ return '<span>'+OCC[o]+'</span>'; }).join('') + '</div>' +
+        '<dl class="spec">' + keep.map(function(k){ return '<dt>'+((who === 'him' && k === 7) ? 'Wear with' : SPEC[k])+'</dt><dd>'+L.s[k]+'</dd>'; }).join('') + '</dl></div></article>';
+    }).join('') + '</div>';
+    host.innerHTML = h;
+    function apply(){
+      var shown = 0;
+      host.querySelectorAll('.lk').forEach(function(el){
+        var L = list[+el.dataset.i];
+        var ok = (st.occ === 'all' || L.occ.indexOf(st.occ) >= 0) && (st.ty === 'all' || L.ty === st.ty) && (st.cut === 'all' || L.cut === st.cut);
+        el.hidden = !ok; if (ok) shown++;
+      });
+      host.querySelector('.count').textContent = shown ? 'Showing ' + shown + ' of ' + list.length + ' looks' : 'No look matches these filters together. Clear one of them.';
+      host.querySelectorAll('.chip').forEach(function(b){ b.setAttribute('aria-pressed', String(st[b.dataset.k] === b.dataset.v)); });
+    }
+    host.addEventListener('click', function(e){
+      var b = e.target.closest('.chip'); if (!b) return;
+      st[b.dataset.k] = b.dataset.v; apply();
+    });
+    apply();
+  }
+  document.querySelectorAll('[data-gallery]').forEach(function(h){ gallery(h, h.getAttribute('data-gallery'), h.getAttribute('data-who')); });
+
+  var PAIRS = [['W14','M05','Boishakhi','Pohela Boishakh, for the two of you.'],
+               ['W17','M16','Gada','Gaye holud in soft butter yellow. Order for the whole holud party.'],
+               ['W18','M06','Akdh','Bride and groom in the same ivory and gold cloth.'],
+               ['W32','M20','Biye','Bridal rose and champagne, woven as a pair.'],
+               ['W33','M19','Ekushey','White and soft grey for the morning of 21 February.'],
+               ['W13','M09','Rose','His koti and her long koti, cut from matching sarees.']];
+  function byCode(c){ return LOOKS.filter(function(L){ return L.c === c; })[0]; }
+  var CHAPTERS = {"her": [["Protidin", "Every day", "Office, campus and weekends. Soft colour, small motifs, and cuts you can move in.", ["W02", "W07", "W11", "W19", "W24", "W28", "W31", "W20", "W27"]], ["Utshob", "Festive days", "Eid morning, Pohela Boishakh, Falgun and Ekushey. Colour with a reason behind it.", ["W03", "W05", "W12", "W14", "W21", "W33", "W30", "W16", "W10"]], ["Holud o akdh", "The ceremonies", "Marigold for the holud, ivory and pastel for the akdh. Made to be photographed together.", ["W17", "W29", "W01", "W06", "W08", "W15", "W18", "W26", "W23"]], ["Biye bari", "After dark", "Soft dusk tones and fuller motifs, for the reception and for the bride.", ["W04", "W09", "W22", "W25", "W32", "W13"]], ["Alada alada", "Mix and match", "Sleeveless blouses, tops, salwars and trousers. Buy one Jamdani piece and wear it with what you already own.", ["W38", "W39", "W40", "W41", "W42", "W43", "W44", "W45", "W46", "W47"]], ["Notun kichu", "Fresh ideas", "Things you have not seen in Jamdani before: a pinafore, a quilted jacket, a saree over a shirt.", ["W48", "W49", "W50", "W51", "W52", "W53", "W54", "W55", "W56"]]], "him": [["Protidin", "Every day", "Shirts, sets and trousers. Jamdani for a Tuesday.", ["M03", "M10", "M11", "M12", "M22", "M28", "M25", "M23", "M17", "M30"]], ["Utshob", "Festive days", "Panjabis for Eid, Boishakh, the holud and Puja.", ["M05", "M15", "M16", "M18", "M21", "M27", "M31"]], ["Biye o akdh", "The ceremonies", "For the groom, his brothers, and the fathers on both sides.", ["M02", "M06", "M07", "M20", "M14", "M04", "M13"]], ["Koti o layers", "The signature", "Our koti, and the jackets and vests that grew out of it.", ["M01", "M08", "M09", "M19", "M24", "M26", "M29"]], ["Pajama o alada", "Mix and match", "Pajamas, sets and a polo. One Jamdani piece, and everything else stays plain.", ["M34", "M35", "M36", "M37", "M38", "M39"]], ["Notun kichu", "Fresh ideas", "A koti set, a quilted gilet, a tupi woven to match, and a Jamdani lungi.", ["M40", "M41", "M42", "M43", "M44", "M45", "M46"]]], "show": [["Six to stop the scroll", "Showpieces", "Made to be photographed and talked about. They bring people in, and the rest of the collection is what they take home.", ["W34", "W35", "W36", "W37", "M32", "M33"]]]};
+  function blook(L, feature){
+    var fig = '<figure class="bl"><img loading="lazy" src="img/'+L.img+'.jpg" alt="'+L.n+' in '+L.col+'">';
+    var cap = '<span class="code"><i style="background:'+L.hex+'"></i>'+L.c+' / '+L.col+'</span><h4>'+L.n+'</h4>' +
+      '<span class="cut">'+L.s[0]+'; '+L.s[2].toLowerCase()+'; '+L.s[3].toLowerCase()+'.</span>' +
+      '<span class="jam"><b>In Jamdani</b>'+L.s[4]+'; '+L.s[6].toLowerCase()+'.</span>';
+    if (!feature) return fig + cap + '</figure>';
+    return '<div class="bfeat">' + fig + '</figure><div class="bl"><p class="say2">'+L.t+'</p>' + cap + '</div></div>';
+  }
+  document.querySelectorAll('[data-chapters]').forEach(function(host){
+    host.innerHTML = CHAPTERS[host.getAttribute('data-chapters')].map(function(ch){
+      var list = ch[3].map(byCode), lead = list.length % 3 === 1 ? 1 : 0, seen = {}, dots = '';
+      list.forEach(function(L){ if (!seen[L.hex] && Object.keys(seen).length < 7) { seen[L.hex] = 1; dots += '<i style="background:'+L.hex+'" title="'+L.col+'"></i>'; } });
+      return '<div class="bch"><span class="lab">'+ch[1]+' · '+list.length+' looks</span><h3>'+ch[0]+'</h3><p class="txt">'+ch[2]+'</p><div class="dots">'+dots+'</div></div>' +
+        '<div class="bgrid">' + list.map(function(L, i){ return blook(L, i < lead); }).join('') + '</div>';
+    }).join('');
+  });
+
+  document.querySelectorAll('[data-pairs]').forEach(function(host){
+    host.innerHTML = PAIRS.map(function(p){
+      var a = byCode(p[0]), b = byCode(p[1]);
+      return '<div class="pair"><div class="duo"><img loading="lazy" src="img/'+a.img+'.jpg" alt="'+a.n+'"><img loading="lazy" src="img/'+b.img+'.jpg" alt="'+b.n+'"></div><h3>'+p[2]+' jora</h3><p>'+p[3]+'</p><span>'+a.c+' '+a.n+' + '+b.c+' '+b.n+'</span></div>';
+    }).join('');
+  });
+
+  var SW = [['buti','sage','Butidar','Small flowers scattered across the cloth. The motif our name comes from.'],
+            ['tercha','sky','Tercha','Motifs running in diagonal lines, which gives the cloth movement.'],
+            ['jaal','blush','Jhalar','A net of connected motifs covering the whole ground.'],
+            ['duria','sand','Duria','Fine, even dots. The quietest Jamdani, good for every day.']];
+  document.querySelector('[data-swatches]').innerHTML = SW.map(function(s){
+    var id = 'sw' + (n++);
+    return '<div class="sw"><svg viewBox="0 0 120 120" role="img" aria-label="'+s[2]+' pattern"><defs>'+pat(id,s[0],C[s[1]].motif)+'</defs><rect width="120" height="120" fill="'+C[s[1]].base+'"/><rect width="120" height="120" fill="url(#'+id+')"/></svg><b>'+s[2]+'</b><span>'+s[3]+'</span></div>';
+  }).join('');
+
+  /* ---------- tabs ---------- */
+  var names = ['pitch','brochure'];
+  function show(t){
+    if (names.indexOf(t) < 0) t = 'pitch';
+    names.forEach(function(k){
+      document.getElementById(k).hidden = (k !== t);
+      document.getElementById('tab-' + k).setAttribute('aria-selected', k === t ? 'true' : 'false');
+    });
+  }
+  document.querySelectorAll('.tabs button').forEach(function(b){
+    b.addEventListener('click', function(){ show(b.dataset.t); window.scrollTo(0, 0); try { history.replaceState(null, '', '#' + b.dataset.t); } catch (e) {} });
+  });
+  show((location.hash || '').slice(1));
+  window.addEventListener('hashchange', function(){ show((location.hash || '').slice(1)); });
+
+})();
+</script>
+
+</body>
+</html>
